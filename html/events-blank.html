@@ -1,0 +1,74 @@
+@@include('_include/header.html', {
+    "title": "Events"
+})
+
+<div class="breadcrumbs">
+	<div class="wrapper">
+		<ul>
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">События</a></li>
+		</ul>
+	</div> <!-- .wrapper -->
+</div> <!-- .breadcrumbs -->
+
+<div class="pagename pagename-events">
+	<div class="wrapper">
+		<div class="headline-typical">
+			<h5 class="h5 wow fadeInUp">События</h5> <!-- .h5 -->
+
+			<label class="btn btn-calendar visible-xs wow fadeInUp" for="input-hidden"><span>Календарь</span></label>
+		</div> <!-- .headline-typical -->
+	</div> <!-- .wrapper -->
+</div> <!-- .pagename -->
+
+<div class="events events-page">
+	<div class="wrapper">
+		<div class="events-in">
+			<div class="events-headline events-headline--tabs">
+				<div class="events-headline__l wow fadeInUp">
+					<ul class="tabs">
+						<li class="tab is-active">Все</li> 
+						<li class="tab">Торжества</li> 
+						<li class="tab">Игры</li> 
+						<li class="tab">Спорт</li> 
+						<li class="tab">Искусство</li> 
+						<li class="tab">Мастер-класс</li> 
+						<li class="tab">Тренинг</li> 
+						<li class="tab">Прочее</li> 
+					</ul> <!-- .tabs -->
+
+					<ul class="tabs tabs--red">
+						<li class="tab is-active">Активные</li> 
+						<li class="tab">Завершенные</li> 
+					</ul> <!-- .tabs -->
+				</div> <!-- .events-headline__l -->
+
+				<div class="events-headline__r">
+					<label class="btn btn-calendar hidden-xs wow fadeInRight" for="input-hidden"><span>Календарь событий</span></label>
+					<input type="hidden" id="input-hidden" name="input-hidden">
+				</div> <!-- .events-headline__r -->
+			</div> <!-- .events-headline -->
+		</div> <!-- .events-in -->
+	</div> <!-- .wrapper -->
+</div> <!-- .events -->
+
+
+<style>
+	:root {
+		--transform: 316px;
+	}
+</style>
+
+<script>
+	const elements = document.querySelectorAll('.events-item .events-item__more');
+
+	elements.forEach(function(element){
+		var elementHeight = element.offsetHeight;
+
+		var headline = element.closest('.events-item__headline');
+
+		headline.style.setProperty(`--transform`, elementHeight + 10 + 'px');
+	});
+</script>
+
+@@include('./_include/footer.html')

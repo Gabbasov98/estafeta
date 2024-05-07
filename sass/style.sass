@@ -1,0 +1,203 @@
+@import 'normalize'
+@import "mixins"
+@import 'sprite'
+@import 'main'
+
+@import 'default'
+
+// pages
+@import "pages/index"
+@import "pages/events"
+@import "pages/members"
+@import "pages/event"
+@import "pages/team"
+@import "pages/member"
+@import "pages/press"
+@import "pages/reports"
+@import "pages/about"
+@import "pages/lk"
+@import "pages/partners"
+@import "pages/create"
+
+
+// components
+@import "components/buttons"
+@import "components/carousel"
+@import "components/dropdown"
+@import "components/navigation"
+@import "components/slider"
+@import "components/modals"
+@import "components/tab"
+
+// layout
+@import "layout/header"
+@import "layout/footer"
+@import "layout/forms"
+@import "layout/navigation"
+@import "layout/sidebar"
+@import "layout/grid"
+
+@import "media"
+
+@import "vars"
+
+.inp-group--dropdown-arrow
+	position: relative
+	z-index: 100
+	
+.hero-headline,
+.events-single
+	.inp-group--dropdown-arrow
+		position: relative
+		top: 18px
+		
+		@media (max-width: 1024px)
+			top: 0
+		
+.events-single
+	.inp-group--dropdown-arrow
+		margin-left: 191px
+		
+		@media (max-width: 1024px)
+			margin-left: 0
+			margin-left: -16px
+		
+.hero-headline
+	.inp-group--dropdown-arrow
+		margin-left: 96px
+		
+		@media (max-width: 1024px)
+			margin-left: 0
+			margin-left: -16px
+
+//  Comment
+
+
+@media (min-width: 1025px)
+	.press-single--container
+		.pin-wrapper
+			height: 1px !important
+			
+	.event-page--container.event-img__wrapper,
+	.member-page--container.event-img__wrapper
+		.pin-wrapper
+			height: 100%
+			
+	.event-page--container,
+	.member-page--container	
+		.event-card
+			top: initial
+			bottom: 0
+			// transform: none
+			right: initial 
+			
+		.wrapper.wrapper-card
+			right: 0!important
+			left: 0!important
+			
+			display: flex
+			-webkit-justify-content: flex-end 
+			justify-content: flex-end 
+			
+	.member-page--container
+		.event-card
+			transform: none
+			
+	.event-member .pin-wrapper
+		height: 1px !important	
+			
+	.press-single__content
+		.pin-wrapper
+			display: none !important
+			
+@media (max-width: 1024px)
+	.hero-headline
+		padding-right: 0
+	
+.inp-group
+	&--dropdown
+		&-event
+			min-width: 225px
+			
+		&-arrow
+			.jq-selectbox__dropdown
+				border-radius: 0px
+				margin-top: 0
+				box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06)
+				border: none 
+				padding-top: 16px
+				padding-bottom: 16px
+				
+				ul
+					background: none
+					
+					li
+						height: auto !important
+						line-height: 1
+						+caps
+						border: none
+						padding-left: 16px
+						padding-right: 16px
+						transition: all 0.4s
+						margin-bottom: 16px
+						
+						&:last-child
+							margin-bottom: 0
+						
+						&:hover
+							background: #fff
+							color: $color-orange
+							
+			.jq-selectbox__trigger
+				width: 32px
+							
+			.jq-selectbox__select 
+				padding-left: 16px
+				padding-right: 32px
+				font-weight: normal 
+				background: transparent!important 
+				border: none!important
+				
+				&-text
+					margin-right: 0px
+					+caps
+					font-weight: 700!important 
+
+							
+
+.events-item__footer-in .events-item__sum-total .events-item__currency, 
+.events-item__footer-in .events-item__sum-total .events-item__sum 
+    color: #1F1F1F  
+
+
+// .inp-group
+// 	&--dropdown 
+// 		&-arrow
+// 			.jq-selectbox__dropdown
+// 				margin-top: 0
+// 				box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06)
+// 				border: none 
+                
+// 				ul
+// 					border: none
+
+//                 	li
+//                 		+caps
+// 						border: none
+// 						padding-left: 16px
+// 						padding-right: 16px
+// 						transition: all 0.4s
+
+// 						&:hover
+// 							background: #FFF 
+// 							color: $color-orange
+                		
+// 			.jq-selectbox__select 
+// 				font-weight: normal 
+// 				background: transparent!important
+// 				border: none!important
+
+// 				&-text
+// 					margin-right: 8px
+// 					+caps 
+// 					font-weight: 700!important 

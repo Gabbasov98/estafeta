@@ -1,0 +1,91 @@
+.reports
+	overflow: hidden
+	
+	.headline
+		&-typical
+			display: flex
+			-webkit-align-items: flex-end 
+			align-items: flex-end 
+			
+			@media (max-width: 1024px)
+				-webkit-align-items: center 
+				align-items: center 
+				-webkit-justify-content: space-between 
+				justify-content: space-between 
+		
+			.btn
+				padding-bottom: 9px
+				padding-left: 0
+				padding-right: 0
+				margin-left: 80px
+				
+				@media (max-width: 1024px)
+					padding-bottom: 0
+					margin-left: 0
+					
+					span
+						font-weight: normal 
+				
+	&__items
+		display: flex
+		-webkit-flex-wrap: wrap 
+		-ms-flex-wrap: wrap 
+		flex-wrap: wrap 
+		margin-left: -32px
+		margin-right: -32px
+		margin-top: 55px
+		margin-bottom: 24px
+		
+		@media (max-width: 1024px)
+			margin-left: -8px
+			margin-right: -8px
+			margin-top: 32px
+	
+	&__item
+		width: 25%
+		margin-bottom: 55px
+		padding-left: 32px 
+		padding-right: 32px
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		
+		@media (max-width: 1024px)
+			width: 50%
+			padding-left: 8px
+			padding-right: 8px
+			margin-bottom: 32px
+
+		
+		&-img
+			display: block
+			width: 100%
+			height: 368px
+			margin-bottom: 16px
+			
+			@media (max-width: 1024px)
+				height: 210px
+				margin-bottom: 20px
+			
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				
+		&-date
+			display: block
+			margin-bottom: 16px
+			color: $color-black
+			
+			+h3
+
+		&-link
+			transition: all 0.4s
+			
+			+base
+
+			color: $color-red
+			
+			&:hover
+				opacity: 0.7 

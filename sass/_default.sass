@@ -1,0 +1,1088 @@
+@import "vars"
+@import "mixins"
+
+html,
+body 
+    margin: 0 auto
+    padding: 0
+    -ms-overflow-x: hidden
+        overflow-x: hidden
+    text-decoration: none
+    max-width: 100vw
+    
+body 
+    font-family: $sans
+    background: #F8F8F8 
+    padding-top: 112px
+    
+    @media(min-width: 1025px)
+        position: relative
+        min-height: 100vh
+        padding-bottom: 210px
+        box-sizing: border-box
+        
+        .footer
+            position: absolute
+            right: 0
+            bottom: 0
+            left: 0
+
+// Default
+.list-unstyled 
+    margin: 0
+    padding: 0
+
+    list-style: none
+
+.tac 
+    text-align: center
+
+object 
+    pointer-events: none
+
+.cf 
+    @include clearfix
+
+// Buttons
+input, button, textarea 
+    outline: none
+    border-radius: 0
+    -webkit-appearance: none
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p 
+    margin: 0
+    font-weight: normal
+
+ul
+    margin: 0
+    padding: 0
+    
+    li
+        list-style-type: none
+        
+a
+    text-decoration: none
+    color: $color-black
+    transition: all 0.4s
+    
+    &:hover
+        cursor: pointer
+
+.info__item
+    border: 1px solid #fff
+          
+.inp-error
+    &.info__item
+        // box-shadow: inset 0 0 0 -1px red
+        border: 1px solid red
+        
+.headline
+    &-typical
+        .h5
+            color: $color-black 
+            
+            +h1
+
+.breadcrumbs
+    margin: 24px 0 12px 0
+     
+    ul
+        font-size: 0
+        
+        li
+            display: inline-block
+            padding-right: 20px
+            position: relative
+            
+            &:after
+                position: absolute
+                content: ' '
+                right: 5px
+                top: 50%
+                transform: translate(0, -50%)
+                width: 10px
+                height: 1px
+                background: $color-medium 
+                
+            &:last-child
+                &:after
+                    display: none
+            
+            a,
+            span
+                color: $color-medium
+                
+                +small
+
+.pagename
+    margin: 0 0 24px 0
+    
+.tabs
+    font-size: 0
+    
+    .tab
+        display: inline-block
+        height: 40px
+        line-height: 38px
+        border: 1px solid $color-light
+        border-left: 0.5px solid $color-light
+        border-right: none
+        transition: all 0.4s
+        color: $color-medium
+        box-sizing: border-box
+        
+        a
+            color: $color-medium
+            display: block
+            
+            padding: 0 15px 
+        
+        &.is-active,
+        &.active
+            background-color: $color-orange
+            border-color: $color-orange
+            color: $color-white
+            
+            a
+                color: $color-white
+             
+        &:hover
+            cursor: pointer
+            
+            background-color: $color-orange
+            color: $color-white
+            border-color: $color-orange
+            
+            a
+                color: $color-white
+        
+        &:last-child
+            border-right: 1px solid $color-light
+        
+        +caps
+
+[data-progress="1"]
+    width: 1%
+
+[data-progress="2"]
+    width: 2%
+    
+[data-progress="3"]
+    width: 3%
+    
+[data-progress="4"]
+    width: 4%
+    
+[data-progress="5"]
+    width: 5%
+
+[data-progress="6"]
+    width: 6%
+    
+[data-progress="7"]
+    width: 7%
+    
+[data-progress="8"]
+    width: 8%
+    
+[data-progress="9"]
+    width: 9%
+
+[data-progress="10"]
+    width: 10%
+    
+[data-progress="11"]
+    width: 11%
+    
+[data-progress="12"]
+    width: 12%
+    
+[data-progress="13"]
+    width: 13%
+
+[data-progress="14"]
+    width: 14%
+    
+[data-progress="15"]
+    width: 15%
+    
+[data-progress="16"]
+    width: 16%
+    
+[data-progress="17"]
+    width: 17%
+    
+[data-progress="18"]
+    width: 18%
+    
+[data-progress="19"]
+    width: 19%
+
+[data-progress="20"]
+    width: 20%
+    
+[data-progress="21"]
+    width: 21%
+    
+[data-progress="22"]
+    width: 22%
+    
+[data-progress="23"]
+    width: 23%
+
+[data-progress="24"]
+    width: 24%
+    
+[data-progress="25"]
+    width: 25%
+    
+[data-progress="26"]
+    width: 26%
+    
+[data-progress="27"]
+    width: 27%
+
+[data-progress="28"]
+    width: 28%
+    
+[data-progress="29"]
+    width: 29%
+    
+[data-progress="30"]
+    width: 30%
+    
+[data-progress="31"]
+    width: 31%
+
+[data-progress="32"]
+    width: 32%
+    
+[data-progress="33"]
+    width: 33%
+    
+[data-progress="34"]
+    width: 34%
+    
+[data-progress="35"]
+    width: 35%
+    
+[data-progress="36"]
+    width: 36%
+    
+[data-progress="37"]
+    width: 37%
+
+[data-progress="38"]
+    width: 38%
+    
+[data-progress="39"]
+    width: 39%
+    
+[data-progress="40"]
+    width: 40%
+    
+[data-progress="41"]
+    width: 41%
+
+[data-progress="42"]
+    width: 42%
+    
+[data-progress="43"]
+    width: 43%
+    
+[data-progress="44"]
+    width: 44%
+    
+[data-progress="45"]
+    width: 45%
+
+[data-progress="46"]
+    width: 46%
+    
+[data-progress="47"]
+    width: 47%
+    
+[data-progress="48"]
+    width: 48%
+    
+[data-progress="49"]
+    width: 49%
+
+[data-progress="50"]
+    width: 50%
+    
+[data-progress="51"]
+    width: 51%
+    
+[data-progress="52"]
+    width: 52%
+    
+[data-progress="53"]
+    width: 53%
+    
+[data-progress="54"]
+    width: 54%
+    
+[data-progress="55"]
+    width: 55%
+
+[data-progress="56"]
+    width: 56%
+    
+[data-progress="57"]
+    width: 57%
+    
+[data-progress="58"]
+    width: 58%
+    
+[data-progress="59"]
+    width: 59%
+
+[data-progress="60"]
+    width: 60%
+    
+[data-progress="61"]
+    width: 61%
+    
+[data-progress="62"]
+    width: 62%
+    
+[data-progress="63"]
+    width: 63%
+
+[data-progress="64"]
+    width: 64%
+    
+[data-progress="65"]
+    width: 65%
+    
+[data-progress="66"]
+    width: 66%
+    
+[data-progress="67"]
+    width: 67%
+
+[data-progress="68"]
+    width: 68%
+    
+[data-progress="69"]
+    width: 69%
+    
+[data-progress="70"]
+    width: 70%
+    
+[data-progress="71"]
+    width: 71%
+    
+[data-progress="72"]
+    width: 72%
+    
+[data-progress="73"]
+    width: 73%
+
+[data-progress="74"]
+    width: 74%
+    
+[data-progress="75"]
+    width: 75%
+    
+[data-progress="76"]
+    width: 76%
+    
+[data-progress="77"]
+    width: 77%
+
+[data-progress="78"]
+    width: 78%
+    
+[data-progress="79"]
+    width: 79%
+    
+[data-progress="80"]
+    width: 80%
+    
+[data-progress="81"]
+    width: 81%
+
+[data-progress="82"]
+    width: 82%
+    
+[data-progress="83"]
+    width: 83%
+    
+[data-progress="84"]
+    width: 84%
+    
+[data-progress="85"]
+    width: 85%
+
+[data-progress="86"]
+    width: 86%
+    
+[data-progress="87"]
+    width: 87%
+    
+[data-progress="88"]
+    width: 88%
+    
+[data-progress="89"]
+    width: 89%
+    
+[data-progress="90"]
+    width: 90%
+    
+[data-progress="91"]
+    width: 91%
+
+[data-progress="92"]
+    width: 92%
+    
+[data-progress="93"]
+    width: 93%
+    
+[data-progress="94"]
+    width: 94%
+    
+[data-progress="95"]
+    width: 95%
+
+[data-progress="96"]
+    width: 96%
+    
+[data-progress="97"]
+    width: 97%
+    
+[data-progress="98"]
+    width: 98%
+    
+[data-progress="99"]
+    width: 99%
+
+[data-progress="100"]
+    width: 100%
+    
+.inp-group
+    &--upload
+        &-big
+            display: block
+            height: 100%
+            width: 100%
+            position: relative
+            
+            input
+                opacity: 0
+                pointer-events: none
+                
+            label
+                display: flex
+                -webkit-justify-content: center 
+                justify-content: center 
+                -webkit-align-items: center 
+                align-items: center 
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                
+                &:hover
+                    cursor: pointer
+                    
+        &-mini
+            display: block
+            height: 368px
+            width: 100%
+            position: relative
+            
+            input
+                opacity: 0
+                pointer-events: none
+                
+            label
+                display: flex
+                -webkit-justify-content: center 
+                justify-content: center 
+                -webkit-align-items: center 
+                align-items: center 
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                left: 0
+                
+                background: url('../img/icons/bg-upload-mini.png') center center no-repeat 
+                -webkit-background-size: 100% 100% 
+                -o-background-size: 100% 100% 
+                background-size: 100% 100% 
+                
+                &:hover
+                    cursor: pointer
+                    
+            .btn:not(.btn-remove)
+                padding-left: 70px
+                padding-right: 70px
+
+                    
+    &--textarea
+        position: relative
+        min-height: 80px
+        
+
+        
+        textarea
+            display: block
+            width: 100%
+            padding: 0
+            margin: 0
+            display: block
+            border: none
+            outline: none
+            resize: none
+            padding: 16px 24px 
+            padding-right: 60px
+            -webkit-box-sizing: border-box
+            -moz-box-sizing: border-box
+            box-sizing: border-box
+            +base
+            line-height: 1
+            display: block
+            height: 80px
+            
+            +placeholder-all
+                color: $color-medium
+                +base
+                line-height: 1
+                
+        &-big
+            height: 120px
+            
+            textarea
+                height: 120px
+                
+    &__counter
+        position: absolute
+        top: 8px
+        right: 8px
+        
+        i
+            font-style: normal 
+            +small
+            color: $color-medium
+            
+        .total
+            background: transparent 
+            &:after
+                display: none
+
+                
+.inp-group--upload
+    &-mini,
+    &-big
+        .btn
+            pointer-events: none
+            
+video::-webkit-media-controls 
+  display: none!important 
+  
+.btn-invite
+    input
+        display: none
+        opacity: 0
+        visibility: hidden
+        position: absolute
+        
+.events-headline--tabs
+    @media (max-width: 1024px)
+        margin-bottom: 50px!important
+        
+    .events-headline__l
+        display: flex
+        -webkit-flex-direction: column
+        -ms-flex-direction: column
+        flex-direction: column
+        -webkit-justify-content: flex-start 
+        justify-content: flex-start 
+        -webkit-align-items: flex-start 
+        align-items: flex-start 
+        
+        .tabs
+            margin-bottom: 20px
+            
+            &:last-child
+                margin-bottom: 0
+                
+.tabs
+    &--red
+        @media (max-width: 1024px)
+            position: absolute
+            left: 0
+            top: 60px
+            
+        li
+            @media(min-width: 1025px)
+                border: none
+                
+                a
+                    width: 138px
+                    text-align: center
+                
+            @media (max-width: 1024px)
+            
+                a
+                    width: 122px
+                    text-align: center
+                
+            &.is-active
+                background: $color-red 
+                background-color: $color-red!important
+                border-color: $color-red!important  
+                
+            &:hover
+                background: $color-red 
+                background-color: $color-red!important
+                border-color: $color-red!important  
+        
+.events
+    .events-items
+        min-height: 225px
+        
+.inp-group--dropdown-event.inp-group--dropdown-arrow .jq-selectbox__dropdown
+    padding-top: 0
+    padding-bottom: 0
+    
+.inp-group--dropdown-event .jq-selectbox__dropdown
+    padding-top: 0!important
+    padding-bottom: 0!important
+    
+    ul
+        max-height: 225px !important
+        -ms-overflow-y: auto
+        overflow-y: auto
+        
+        // +placeholder-all
+        //     background: red
+        
+        li
+            &:first-child
+                padding-top: 16px
+                
+            &:last-child
+                padding-bottom: 16px
+                
+        @media(max-width: 1024px)
+            max-height: 210px !important
+
+@media (min-width: 1025px)       
+    .btn-profile
+        padding: 0!important
+        width: 140px
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+        text-align: center
+        display: flex
+        -webkit-justify-content: center 
+        justify-content: center 
+        
+        span
+            display: inline-flex
+            -webkit-justify-content: center 
+            justify-content: center 
+            
+    body
+        .header-r .inp-group
+            left: -110px
+            
+        .lk-slider__headline-r .btn-mini
+            min-width: 150px
+            -webkit-box-sizing: border-box
+            -moz-box-sizing: border-box
+            box-sizing: border-box
+            
+    .events-headline__r
+        .btn
+            &-calendar
+                padding-right: 0
+                
+    .event-card__name
+        .h5
+            max-width: 420px
+            
+    .event-card
+        min-width: 430px
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box 
+        
+    .event-img
+        &__wrapper
+            pointer-events: none
+            
+    .event-card
+        pointer-events: all
+        
+    body
+        .event-team .event-img img
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            
+    .img--horizontal
+        top: 50%!important
+        transform: translate(0, -50%)
+        width: 100%!important
+        height: auto!important
+        
+@media (max-width: 1024px)
+    body
+        .event-team .event-img img
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+        
+.inp-group--calendar
+    position: relative !important
+    
+    input
+        position: relative !important
+
+.inp-group--upload-big,
+.inp-group--upload-mini
+    img
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        object-fit: cover
+        object-position: top
+        z-index: 100 
+    
+    .btn-remove
+        pointer-events: all
+        z-index: 101 
+        
+.map-columns
+    ul
+        &.map-level-0
+            ul
+                padding-left: 10px
+                
+                li
+                    margin-bottom: 10px
+                    
+                    a
+                        margin-bottom: 0 !important
+                    
+            a
+                display: block
+                margin-bottom: 5px
+                    
+.lang.is-hidden
+    pointer-events: none
+    visibility: hidden
+    display: none 
+    opacity: 0
+    
+.inp-group--search
+    form
+        display: block
+        height: 100%
+        
+.hero-sum__total span
+    color: #000!important
+    
+            
+@media (max-width: 1350px)
+    body
+        .header-r .inp-group
+            left: -90px
+            
+@media (max-width: 767px)
+    .lk-slider__headline-r
+        display: flex
+        -webkit-justify-content: space-between 
+        justify-content: space-between 
+        
+        .btn
+            display: inline-block
+            min-width: initial!important
+            width: 48% 
+            -webkit-box-sizing: border-box
+            -moz-box-sizing: border-box
+            box-sizing: border-box
+            padding: 0
+            text-align: center
+            
+    body
+        .hero-sum__number
+            font-size: 20px !important
+            
+@media (max-width: 350px)
+    .lk-slider__headline-r
+        .btn
+            font-size: 11px!important
+     
+    body
+        .events-item__footer-in
+            padding-left: 10px
+            padding-right: 10px
+            
+        .hero-items .slick-list
+            padding-right: 50px
+
+.inp-group
+    &--upload
+        &-big,
+        &-mini
+            .btn-remove
+                padding: 0
+                position: absolute
+                top: 15px
+                right: 15px
+                
+                @media(max-width: 767px)
+                    top: 10px
+                    right: 10px
+                           
+.event-img__wrapper.lk
+    pointer-events: none
+
+    .event-img
+        &__in
+            pointer-events: all
+            
+            .btn-remove
+                position: absolute
+                top: 15px
+                right: 15px
+                
+                @media(max-width: 767px)
+                    top: 10px
+                    right: 10px
+            
+            img
+                background: url('../img/icons/profile-blank.svg') center center no-repeat
+                background-size: 200px
+                
+                @media (max-width: 1024px) 
+                    background-color: #fff 
+                    background-size: 100px 
+                    
+                &.img--horizontal
+                    @media(min-width: 1025px)
+                        height: auto !important
+                        top: 50% !important
+                        transform: translate(0, -50%)
+                        margin-top: -78px
+                    
+    .event-img__upload
+        .btn
+            color: #fff
+            border-color: #FFF 
+            background: $color-orange
+            
+    .event-img__in img 
+        @media (max-width: 1024px) 
+            min-height: 315px
+            display: block
+
+.hero--index 
+    @media(min-width: 1025px)
+        .slick-track
+            margin-left: initial!important 
+
+// New
+// .event-page--container .wrapper.wrapper-card, 
+// .member-page--container .wrapper.wrapper-card
+//     position: fixed
+//     top: 0
+//     bottom: 0
+//     height: auto
+    
+// .event-card
+//     transform: none!important
+    
+// .pin-wrapper
+//     height: 100% !important
+
+// .event-page--container
+//     position: static !important
+//     height: auto !important
+
+@media(max-width: 1024px)
+    body
+        .sticky
+            .event-card
+                position: static
+                transform: none
+                
+            .wrapper-card
+                padding-left: 0
+                padding-right: 0
+                
+                .event-card
+                    padding: 32px 24px 
+                    
+                    &__name
+                        br
+                            display: none
+                            
+                    .event-content .btn
+                        height: 40px
+                        line-height: 40px
+                        
+                .event-status
+                    margin-bottom: 24px
+                    
+                    &__progress
+                        margin-bottom: 8px
+                        
+                .event-members
+                    margin-top: 32px
+                    
+                    &__headline
+                        margin-bottom: 16px
+                        
+                    &__footer
+                        margin-top: 16px
+                    
+        .sticky
+            .event
+                margin-bottom: 24px
+            
+@media(min-width: 1025px)
+    // new
+    .sticky
+        .wrapper-card .event-card
+            transform: translate3d(0, 0, 0)!important
+            // transition: all 0.1s
+        
+        .wrapper-card
+            transform: translate3d(0, 272px, 0)
+            
+            &.is-transition
+                transition: all 0.4s
+            
+        .wrapper.wrapper-card
+            height: 100vh
+            position: fixed
+            top: 0
+            bottom: 0
+            left: 0!important
+            right: 0!important
+            margin-left: auto
+            margin-right: auto
+            
+        .pin-wrapper
+            height: 1px !important
+    
+    // new end
+        
+    body
+        .event-more
+            .h5
+                text-shadow: -1px 0 #F8F8F8, 0 1px #F8F8F8, 1px 0 #F8F8F8, 0 -1px #F8F8F8
+                
+        .lk-img__footer .lk-sum__sum .sum
+            font-size: 50px
+            
+        .lk-img__footer .lk-sum__sum .currency
+            position: relative
+            bottom: -2px
+            
+        .event-img__wrapper.lk .event-img__in img
+            height: calc(100% - 156px) 
+            
+        .about__tab-us
+            padding-top: 0
+            
+            .about__tabs
+                margin-top: 0
+                
+            .about-us__top-l
+                padding-top: 85px
+                
+        .event-desc
+            .event-desc__in
+                max-width: calc(100% - 540px) 
+                
+
+        .event-page__wrapper .event .event-img__wrapper.event-page--container .event-img
+            width: 57%
+            margin-left: auto
+            height: 100%
+            position: relative
+            background: #EAEAEA 
+            
+            img
+                width: 100%
+            
+        
+        // .event-img__wrapper
+        //     .event-img
+        //         position: relative
+        //         width: 57%
+        //         height: calc(100vh - 112px)!important
+        //         margin-left: auto
+        //         background: #EAEAEA 
+
+            
+@media(min-width: 1025px) and (max-width: 1350px)
+    body
+        .lk-img__footer .lk-sum__sum .sum
+            font-size: 40px
+            
+        .event-img__wrapper.lk .event-img__in img
+            height: calc(100% - 146px) 
+            
+@media(max-width: 767px)
+    body
+        .lk-img__footer .lk-sum__sum .sum
+            font-size: 30px !important
+            
+        .hero--teams .hero-item .hero-sum__number
+            font-size: 16px!important
+            
+        .hero.members-page,
+        .team
+            .hero-items .hero-sum__number
+                font-size: 16px!important
+            
+@media (max-width: 350px)
+    body
+        .lk-img__footer .lk-sum__sum .sum
+            font-size: 25px !important
+            
+        .hero--teams .hero-item .hero-sum__number
+            font-size: 13px!important
+            
+        .hero-items .hero-top
+            // height: 198px !important
+            
+        .hero.members-page,
+        .team
+            .hero-items 
+                .hero-sum__number
+                    font-size: 13px!important
+                
+                .hero-sum__currency
+                    font-size: 9px
+                    padding-left: 1px
+                

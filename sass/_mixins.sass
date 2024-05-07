@@ -1,0 +1,105 @@
+@import "vars"
+@mixin br($radius) 
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+@mixin clearfix 
+	&:after 
+		content: ' '
+
+		visibility: hidden
+		display: block
+		height: 0
+
+		clear: both
+		
+
+@mixin caps
+	font-family: $sans
+	font-weight: $sans-bold
+	font-size: 14px
+	text-transform: uppercase 
+	
+	@media(max-width: 1024px)
+		font-size: 12px !important 
+	
+@mixin base
+	font-family: $sans
+	font-weight: $sans-regular
+	font-size: 17px
+	line-height: 142%
+	
+	@media(max-width: 1024px)
+		font-size: 14px !important
+	
+@mixin small
+	font-family: $sans
+	font-weight: $sans-regular
+	font-size: 15px
+	
+@mixin micro
+	font-family: $sans
+	font-weight: $sans-regular
+	font-size: 12px
+	
+@mixin h0
+	font-family: $akrobat
+	font-weight: bold
+	text-transform: uppercase
+	font-size: 100px
+	
+	@media(max-width: 1024px)
+		font-size: 58px!important
+
+@mixin h1
+	font-family: $akrobat
+	font-weight: bold
+	text-transform: uppercase
+	font-size: 66px
+	
+	@media(max-width: 1024px)
+		font-size: 40px !important
+		
+@mixin h2
+	font-family: $akrobat
+	font-weight: bold
+	text-transform: uppercase
+	font-size: 44px
+	line-height: 48px 
+	
+	@media(max-width: 1024px)
+		font-size: 40px!important
+		line-height: 1
+	
+@mixin h3
+	font-family: $akrobat
+	font-weight: bold
+	text-transform: uppercase
+	font-size: 32px
+	
+	@media(max-width: 1024px)
+		font-size: 24px !important
+	
+@mixin h4
+	font-family: $sans
+	font-weight: $sans-medium
+	font-size: 24px
+	line-height: 133%
+	
+@mixin h5
+	font-family: $sans
+	font-weight: $sans-regular
+	font-size: 20px
+	line-height: 120%
+
+
+@mixin placeholder-all 
+    &.placeholder  
+    	@content 
+    &:-moz-placeholder  
+    	@content 
+    &::-webkit-input-placeholder 
+    	@content
+

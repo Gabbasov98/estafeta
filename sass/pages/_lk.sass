@@ -1,0 +1,434 @@
+.info
+	&-txt.event-txt
+		width: 54%
+		
+	&__item
+		background: $color-white
+		display: flex
+		-webkit-align-items: center 
+		align-items: center 
+		-webkit-justify-content: space-between 
+		justify-content: space-between 
+		height: 56px
+		padding-left: 24px
+		padding-right: 24px
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		margin-bottom: 1px
+		
+		width: 100%	
+		position: relative
+		transition: all 0.4s
+		
+		&.is-focused
+			box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1)
+			z-index: 10 
+		
+		&--hw
+			width: 50%
+			
+			&:nth-child(odd)
+				margin-right: 1px
+				width: calc(50% - 1px) 
+				
+		&--double
+			padding-left: 0
+			padding-right: 0
+			
+			.info__item
+				&-l
+					width: 70%
+					
+				&-r
+					width: 30%
+				
+		&-l
+			span
+				+base
+
+				color: $color-medium
+				
+		&-r
+			width: 50%
+			
+			.inp-group
+				display: block
+				width: 100%
+				
+				input
+					display: block
+					width: 100%
+					text-align: right !important
+				
+		.inp-group
+			background: transparent
+			margin-bottom: 0
+			 
+			input
+				background: transparent
+				border: none 
+				padding: 0
+				margin: 0
+				text-align: right
+				
+				&:hover,
+				&:focus,
+				&:hover:focus
+					outline: none
+					background: transparent
+					border: none 
+					
+				color: $color-black
+				
+				+base
+		&-l	
+
+	&__items
+		&-wrapper
+			margin-bottom: 40px
+			
+		&-headline
+			margin-bottom: 15px
+			
+			span
+				+caps
+				color: $color-black
+			
+		&-in	
+			display: flex
+			-webkit-flex-wrap: wrap 
+			-ms-flex-wrap: wrap 
+			flex-wrap: wrap 
+			
+			& + .info__items-in
+				margin-top: 15px
+				
+		&-btn
+			.btn
+				padding-left: 120px
+				padding-right: 120px
+				
+	&__headline
+		margin: 0 0 40px 0
+		 
+		.h5
+			+h1
+			color: $color-black
+
+.faq
+	margin-top: 40px
+	
+	&__in
+		display: flex
+		margin-left: -20px
+		margin-right: -20px
+		
+	&__l
+		width: 77%
+		padding-left: 20px
+		padding-right: 20px
+		margin-bottom: 55px
+		
+	&__r
+		width: 23%
+		padding-left: 20px
+		padding-right: 20px
+		
+	&__items
+		&--more
+			display: none
+		
+	&__item
+		box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06)
+		margin-bottom: 12px
+		
+		&.is-active
+			.faq__item-headline
+				&:after
+					transform: translate(0, -50%) rotate(0deg)
+
+		
+		&-content
+			padding: 24px 32px 40px 32px 
+			background: $color-white 
+			
+			position: relative
+			
+			&:after
+				position: absolute
+				content: ' '
+				top: 0
+				left: 32px
+				right: 32px
+				height: 1px
+				background: $color-light 
+			
+			p
+				+base
+				color: $color-black
+				
+				margin-bottom: 15px
+				
+				&:last-child
+					margin-bottom: 0
+
+		
+		&-headline
+			padding-left: 32px
+			padding-right: 32px
+			padding-top: 24px
+			padding-bottom: 24px
+			position: relative
+			background: $color-white 
+			
+			&:hover
+				cursor: pointer
+			
+			&:after
+				position: absolute
+				content: ' '
+				right: 32px
+				top: 50%
+				transform: translate(0, -50%) rotate(180deg)
+				width: 16px
+				height: 27px
+				background: url('../img/faq/arrow.svg') center center no-repeat
+				-webkit-background-size: contain 
+				-o-background-size: contain 
+				background-size: contain 
+				transition: all 0.4s
+			
+			.h5
+				+h4
+
+	&__more
+		&-btn
+			margin-top: 40px
+			width: 100%
+			display: flex
+			-webkit-justify-content: center 
+			justify-content: center 
+			
+.contacts
+	&-sidebar
+		&__headline
+			margin-bottom: 24px
+			
+			.h5
+				+h3
+				text-transform: uppercase
+				color: $color-black
+				margin-bottom: 24px
+				
+			p
+				+base
+				color: $color-black
+				
+		&__item
+			margin-bottom: 24px
+					
+			.contacts
+				&__item
+					
+					&-headline
+						span
+							+h4
+							color: $color-black
+							display: block
+							margin-bottom: 12px
+							
+					&-phone
+						a
+							display: block
+							margin-bottom: 8px
+							text-decoration: none
+							+base
+							color: $color-black
+							transition: all 0.4s
+							
+							&:hover
+								color: $color-orange
+							
+					&-email
+						a
+							display: inline-block
+							color: $color-orange
+							text-decoration: underline
+							transition: all 0.4s
+							
+							&:hover
+								opacity: 0.7 
+								
+.hero
+	&--lk
+		background: transparent
+		margin-bottom: 55px
+		padding-bottom: 0
+		padding-top: 0
+		
+		.hero
+			&-in
+				&:before
+					background: #F8F8F8 
+					display: none
+					
+		&.hero--events
+			overflow: hidden 
+			
+			.events-item__headline
+				transform: none
+			
+			.events-item__in
+				&:hover
+					&:after
+						display: none
+						
+					.events-item__headline
+						transform: none
+			
+			.events-items
+				display: block
+				margin-left: 0px
+				margin-right: 0px
+				font-weight: normal 
+				
+				.events-item.slick-slide
+					display: inline-block!important
+					width: 432px!important
+					max-width: 432px!important
+					min-width: 432px!important
+					margin-right: 24px
+					
+					&:hover,
+					&:focus,
+					&:hover:focus
+						outline: none
+					
+				.events-item__wrapper
+					padding-left: 0
+					padding-right: 0
+								
+.lk
+	&-sliders
+
+	&-slider
+		&__headline
+			display: flex
+			-webkit-justify-content: space-between 
+			justify-content: space-between 
+			margin-bottom: 40px
+			
+			.h5
+				margin-right: 32px
+				+h2
+				color: $color-black
+				line-height: 0.9
+
+				& + span
+					line-height: 1
+					+caps
+					color: $color-orange
+					
+			&-l
+				display: flex
+				-webkit-align-items: flex-end 
+				align-items: flex-end 
+				
+			&-r
+				.btn
+					min-width: 335px
+					-webkit-box-sizing: border-box
+					-moz-box-sizing: border-box
+					box-sizing: border-box
+					text-align: center
+					
+	&-img
+		&__footer
+			position: absolute
+			right: 0
+			bottom: 0
+			left: 0
+			background: #FFF 
+			padding: 40px
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			
+			.lk-sums
+				display: flex
+				
+			.lk
+				&-sum
+					margin-right: 130px
+					
+					&:first-child
+						span
+							color: $color-orange
+							
+					&:nth-child(2)
+						span
+							color: $color-red
+					
+					&__headline
+						margin: 0 0 12px 0
+						 
+						.h5
+							+caps
+							color: $color-black
+							
+					&__sum
+						display: flex
+						-webkit-align-items: flex-end 
+						align-items: flex-end 
+						
+						.sum
+							+h1
+							line-height: 0.96
+							font-weight: normal 
+							
+							@media (max-width: 1350px)
+								font-size: 44px
+
+						.currency
+							font-size: 24px
+							color: $color-orange
+							font-weight: $sans-medium 
+							margin-left: 10px
+					
+					&:last-child
+						margin-right: 0
+
+
+.event-img__wrapper
+	&.lk
+		.event-img__in
+			width: 45%
+			font-weight: normal 
+			
+			img
+				height: calc(100% - 171px) 
+				
+				@media (max-width: 1350px)
+					height: calc(100% - 150px) 
+				
+		.event-img
+			&__upload
+				position: absolute
+				bottom: 195px
+				left: 40px
+				
+				label
+					width: 180px
+					padding-left: 0
+					padding-right: 0
+					text-align: center
+					height: 40px
+					line-height: 38px
+					
+					+caps
+					
+				input
+					opacity: 0
+					width: 0
+					position: absolute

@@ -1,0 +1,310 @@
+.footer
+	background: $color-black-light
+	padding: 84px 0 
+	
+	&-in
+		display: flex
+		-webkit-justify-content: space-between 
+		justify-content: space-between 
+		
+	&-item
+		display: flex
+		
+		&:first-child
+			margin-right: 87px
+		
+		ul
+			display: flex
+			
+	&-copy
+		display: flex
+		-webkit-align-items: center 
+		align-items: center 
+		
+		&__icon
+			display: block
+			text-align: center
+			
+			margin-right: 16px
+			
+			width: 40px
+			height: 40px
+			border: 1px solid $color-dark
+			-webkit-border-radius: 50% 
+			border-radius: 50% 
+			line-height: 38px
+			
+			i
+				font-style: normal 
+				color: $color-dark
+				
+				+small
+
+		span
+			color: $color-dark
+			
+			+small
+
+	&-link
+		display: flex
+		-webkit-align-items: center 
+		align-items: center 
+		
+		a
+			color: $color-dark
+			transition: all 0.5s
+		
+			+small
+
+			&:hover
+				opacity: 0.7 
+			
+	&-payments
+		display: flex
+		-webkit-align-items: center 
+		align-items: center 
+		
+		&__l
+			margin-right: 14px
+			
+			span
+				color: $color-dark
+				
+				+small
+		
+		&__r
+			ul
+				display: flex
+				-webkit-align-items: center
+				align-items: center
+				
+				li
+					margin-left: 10px
+					margin-right: 10px
+					
+					svg,
+					img
+						display: block
+						width: auto
+						height: 100%
+						
+					&:firs-child
+						height: 13.5px
+
+					&:nth-child(2)
+						height: 21px
+
+					&:nth-child(3)
+						height: 23px
+
+					&:nth-child(4)
+						height: 18px
+
+					&:nth-child(5)
+						height: 24px
+						position: relative
+						top: -2px
+						margin-right: 0
+						
+	&-socials
+		display: flex
+		-webkit-align-items: center 
+		-webkit-align-items: flex-end 
+		align-items: flex-end 
+		
+		ul
+			li
+				margin-left: 6px
+				margin-right: 6px
+				
+				a
+					transition: all 0.5s
+					
+					&:hover
+						opacity: 0.7 
+						
+.is-ovh
+	overflow: hidden
+	
+.menu--active
+	.menu
+		transform: translate3d(0, 0%, 0)
+		opacity: 1
+		pointer-events: all
+		
+	.header-r
+		opacity: 0
+		pointer-events: none
+		
+	.header-c
+		opacity: 1
+		pointer-events: all
+
+.btn-burger
+	width: 16px
+	height: 14px
+	position: relative
+	margin-right: 0!important
+	
+	&__wrapper
+		padding: 10px 24px
+		margin-left: -24px
+		outline: none
+		border: none
+		-webkit-box-shadow: none 
+		box-shadow: none 
+		
+		-webkit-tap-highlight-color: transparent
+		
+		@media (min-width: 1025px)
+			display: none
+		
+		&:hover,
+		&:focus,
+		&:hover:focus
+			outline: none
+			border: none
+			-webkit-box-shadow: none 
+			box-shadow: none
+	
+	span
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 2px
+		background: #1F1F1F 
+		transform: rotate(0deg)
+		transition: 0.2s ease-in-out
+		
+		&:nth-child(2)
+			top: 6px
+			
+		&:nth-child(3)
+			top: 12px
+			
+	&.is-active
+		span
+			&:first-child
+				top: 6px
+				transform: rotate(135deg)
+				
+			&:nth-child(2)
+				left: -30px
+				opacity: 0
+				
+				
+			&:nth-child(3)
+				top: 6px
+				transform: rotate(-135deg)
+						
+.menu
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: $color-white
+	z-index: 10000
+	padding-top: 90px
+	opacity: 0
+	transition: all 0.5s
+	pointer-events: none
+	transform: translate3d(0, -100%, 0)
+	
+	@media (min-width: 1025px)
+		display: none
+	
+	.inp-group
+		margin: 0 0 32px 0
+		height: 40px
+		
+		position: relative
+		
+		&:after
+			position: absolute
+			content: ' '
+			width: 16px
+			height: 16px
+			background: url('../img/icons/search.svg') center center no-repeat
+			-webkit-background-size: contain 
+			-o-background-size: contain 
+			background-size: contain 
+			right: 12px
+			top: 50%
+			transform: translate(0, -50%)
+		 
+		input
+			padding: 0
+			margin: 0
+			display: block
+			width: 100%
+			height: 100%
+			border: none
+			-webkit-box-shadow: none 
+			box-shadow: none 
+			background: $color-bg-light
+			border-radius: 16px
+			padding-left: 16px
+			padding-right: 35px 
+			font-size: 14px
+			
+			+placeholder-all
+				color: $color-medium
+				+base
+			
+		&--search
+
+	
+	&__links
+		ul
+			li
+				margin-bottom: 24px
+				text-align: center
+				
+				&:last-child
+					margin-bottom: 0
+					
+				a
+					+h3
+
+	&__footer
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		display: flex
+		
+		.btn
+			text-align: center
+			
+			span
+				font-size: 14px !important
+			
+			&:first-child
+				width: 65%
+				
+			&:last-child
+				width: 35%
+				
+			&-profile
+				span
+					padding-left: 32px
+					position: relative
+					
+					&:before
+						position: absolute
+						content: ' '
+						left: 0
+						top: 50%
+						transform: translate(0, -50%)
+						
+						width: 16px
+						height: 15px
+						background: url('../img/icons/profile.svg') center center no-repeat
+						-webkit-background-size: contain 
+						-o-background-size: contain 
+						background-size: contain 
+						
+					    

@@ -1,0 +1,236 @@
+.sharing-single
+	&--left
+		padding-bottom: 15px
+		padding-top: 55px
+		
+		.sharing
+			&-headline
+				margin-bottom: 32px
+				
+				.h5
+					text-align: left
+					
+			&-items
+				-webkit-justify-content: flex-start 
+				justify-content: flex-start 
+
+				.sharing-item
+					&:first-child
+						margin-left: 0
+						
+.event-team
+	&--single
+		.event-img 
+			img
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+				
+				width: 100%
+				height: 100%
+				object-fit: cover
+				
+		.event-txt
+			min-height: initial 
+			
+		.event-img__in
+			height: calc(100vh - 112px) 
+			
+		.event-img__wrapper
+			height: calc(100vh - 112px) 
+			
+.event-team .event-img__in
+	max-width: 1200px
+	
+.team__headline .nav-tabs li a
+	&:hover,
+	&:focus,
+	&:hover:focus
+		outline: none
+
+		
+.team
+	&__headline
+		&-in
+			margin-top: 24px
+			display: flex
+			-webkit-justify-content: space-between 
+			justify-content: space-between 
+			-webkit-align-items: center 
+			align-items: center 
+			
+		.nav
+			&-tabs
+				padding: 0
+				
+				li
+					height: 48px
+					line-height: 48px
+					box-sizing: border-box
+					
+					&.active
+						a
+							background: transparent 
+							
+					a
+						color: $color-medium
+						+caps
+						height: 46px
+						line-height: 46px
+						box-sizing: border-box
+						transition: all 0.4s
+						
+					&:hover
+						a
+							color: $color-white
+			
+.users
+	padding: 40px 32px
+	background: $color-white
+	margin: 24px 0 0 0
+	
+	&__btn
+		text-align: center
+		margin-top: 32px
+		
+		.btn
+			min-width: 280px
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			margin-left: auto
+			margin-right: auto
+	
+	.user
+		display: flex
+		margin-bottom: 16px
+		
+		&__l
+			width: 56px
+			margin-right: 24px
+			
+		&__r
+			width: calc(100% - 80px) 
+			padding-top: 5px
+			padding-bottom: 16px
+			border-bottom: 1px solid $color-bg-dark
+			
+			&-top
+				display: flex
+				-webkit-align-items: center 
+				align-items: center 
+				-webkit-justify-content: space-between 
+				justify-content: space-between 
+				margin-bottom: 8px
+				
+			&-bottom
+				p
+					color: $color-medium
+					line-height: 133%
+					
+					+small
+			
+		&__name
+			color: $color-black
+			display: block
+			margin-bottom: 2px
+			
+			+base
+
+		&__sum
+			color: $color-orange
+			
+			+small
+
+			i
+				font-style: normal 
+				color: $color-medium
+
+		&__date
+			color: $color-medium
+			+base
+			
+		&__img
+			display: block
+			width: 56px
+			height: 56px
+			background: url('../img/icons/user-blank.svg') center center no-repeat
+			-webkit-background-size: cover 
+			-o-background-size: cover 
+			background-size: cover 
+			
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: top
+				-webkit-border-radius: 50% 
+				border-radius: 50% 
+				
+.events
+	&-list
+		padding: 32px 40px
+		background: $color-white
+		margin-top: 24px 
+		
+		&__btn
+			text-align: center
+			
+			.btn
+				min-width: 280px
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				margin-left: auto
+				margin-right: auto
+		 
+		&__item
+			margin: 0 0 25px 0 
+			display: block
+			
+			&:last-child
+				margin-bottom: 0
+			
+		&__top
+			margin-bottom: 12px
+			display: flex
+			-webkit-justify-content: space-between 
+			justify-content: space-between 
+			
+		&__footer
+			display: flex
+			-webkit-justify-content: space-between 
+			justify-content: space-between 
+			
+		&__name
+			+caps
+
+			color: $color-black
+			
+		&__date
+			+small
+
+			color: $color-medium
+			
+		&__progress
+			height: 2px
+			background: $color-light
+			position: relative
+			margin-bottom: 8px
+			
+		&__status
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			background: $color-red 
+			
+		&__current
+			color: $color-red
+			+base
+			
+		&__total
+			color: $color-medium
+			+base

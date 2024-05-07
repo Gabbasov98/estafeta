@@ -1,0 +1,305 @@
+// Modals
+.modal-open {
+  overflow: hidden;
+  
+  .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.fade {
+  opacity: 0;
+  
+  transition: opacity 0.15s linear;
+  
+  &.in {
+    opacity: 1;
+  }
+}
+
+.modal {
+  z-index: 1050;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  overflow: hidden;
+  display: none;
+  
+  outline: 0;
+  
+  -webkit-overflow-scrolling: touch;
+  
+  .btn-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    display: block;
+    width: 35px;
+    height: 35px;
+    
+    background: url(../images/ico-close-w.png) no-repeat;
+    background-size: 100% 100%;
+        
+    text-indent: -9999px;
+    
+    transition: all 200ms ease;
+    
+    transform: translate(0,-50%);
+    
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  
+  &.fade {
+    .modal-dialog {
+      transform: translate(0, -25%);
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  &.in {
+    .modal-dialog {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.modal-dialog {
+  position: relative;
+  width: 780px;
+  margin: 80px auto 40px auto;
+  
+  @media (max-width: $tablet) {
+    width: 700px;
+  }
+  
+  @media (max-width: $mobile) {
+    width: auto;
+    margin-top: 65px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.modal-content {
+  position: relative;
+    
+  box-sizing: border-box;
+
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  
+  outline: 0;
+}
+
+.modal-backdrop {  
+  z-index: 1040;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  background-color: rgba($blue, .75);
+  
+  &.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  &.in {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+  }
+}
+
+
+// Modal vertical middle
+@media (min-width: $tablet_m) {
+  .modal_vam {
+    padding: 0!important;
+    text-align: center;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      
+      vertical-align: middle;
+    }
+
+    .modal-dialog {
+      display: inline-block;
+      
+      text-align: left;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+// Modal info
+.modal_info {
+  .modal-content {
+    padding: 40px 60px 50px 60px;
+
+    background-color: $white;
+    
+    border-radius: 15px;
+    
+    box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    margin: 0 0 30px 0;
+    
+    text-align: center;
+    
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+    
+    h3 {
+      margin: 0;
+      
+      font-weight: bold;
+      font-size: 28px;
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    margin: 0 0 20px 0;
+
+    font: 500 14px/130% $sans;
+    color: $blue;
+    
+    a {
+      color: inherit;
+      
+      &:hover {
+        color: $red;
+      }
+    }
+  }  
+}
+
+
+// Modal reg
+.modal_reg {
+  position: absolute;
+
+  .modal-dialog {
+    @extend .wrapper;
+    
+    width: auto;
+  }
+
+  .modal-content {    
+    max-width: 720px;
+    margin-top: $header-height * 2;
+  }
+
+  &__title {
+    margin: 0 0 40px 0;
+    
+    text-align: center;
+    
+    h3 {
+      margin: 0;
+
+      font-weight: bold;
+      font-size: 28px;
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+
+  .row-2 {
+    @include clearfix;
+    
+    margin-right: -15px;
+    margin-left: -15px;
+    
+    .col {
+      float: left;
+      width: 50%;
+      padding-right: 15px;
+      padding-left: 15px;
+      
+      box-sizing: border-box;
+      
+      .inp-group {
+        display: block;
+      }
+    }
+  }
+
+  .row-3 {
+    @include clearfix;
+    
+    margin-right: -15px;
+    margin-left: -15px;
+    
+    .col {
+      float: left;
+      width: 33.333333%;
+      padding-right: 15px;
+      padding-left: 15px;
+      
+      box-sizing: border-box;
+      
+      .inp-group {
+        display: block;
+      }
+    }
+  }
+
+  .inp-agree {
+    .jq-checkbox {
+      float: left;
+      margin-right: 10px;
+    }
+
+    p {
+      overflow: hidden;
+      margin: 0;
+      
+      font: bold 13px/130% $sans;
+      color: $white;
+      text-transform: uppercase;
+      
+      a {
+        color: $white;
+        text-decoration: underline;
+        
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+
+.open-reg {
+  overflow: auto;
+
+  .modal-backdrop {
+    display: none;
+    
+    transition: none;
+    
+    &.in {
+      display: none;
+    }
+  }
+}

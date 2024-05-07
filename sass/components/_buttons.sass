@@ -1,0 +1,518 @@
+.btn
+	display: inline-block
+	background: transparent
+	border: none
+	box-shadow: none
+	outline: none
+	
+	padding-left: 25px
+	padding-right: 25px
+	font-size: 14px
+	
+	&-kit
+		min-width: 192px
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		padding: 0
+		text-align: center
+		margin-bottom: 10px
+	
+	&:hover
+		cursor: pointer
+		
+	&-remove
+		width: 30px
+		height: 30px
+		position: relative
+		padding: 0
+		background: #FFF 
+		border-radius: 50% 
+		border: 1px solid #79838C
+		
+		@media(max-width: 767px)
+			width: 25px
+			height: 25px
+		
+		&:after
+			width: 15px
+			height: 15px
+			
+			margin-left: auto
+			margin-right: auto
+			
+			position: absolute
+			content: ' '
+			top: 50%
+			transform: translate(0, -50%)
+			left: 0
+			right: 0
+			
+			background: url('../img/icons/close.svg') center center no-repeat
+			background-size: contain 
+			
+			@media(max-width: 767px)
+				width: 12px
+				height: 12px
+			
+	&-invite
+		width: 115px
+		position: relative
+		height: 32px
+		pointer-events: none
+		
+		@media (max-width: 1024px)
+			width: 40px
+			height: 40px
+			
+			span
+				text-indent: -9999px 
+				
+
+			label
+				&:after
+					position: absolute
+					content: '+'
+					left: 0
+					right: 0
+					top: 50%
+					transform: translate(0, -50%)
+					text-align: center
+					color: $color-white
+					font-weight: $sans-bold
+					font-size: 15px!important
+					
+				&:before
+					position: absolute
+					content: '-'
+					left: 0
+					right: 0
+					top: 50%
+					transform: translate(0, -50%)
+					text-align: center
+					opacity: 0
+					color: $color-medium
+					font-weight: $sans-bold
+					font-size: 15px!important
+				
+		
+		input
+			position: absolute
+			width: 0
+			left: 0
+			top: 0
+			
+			&:checked
+				+ label
+					background-color: $color-white
+					border-color: $color-light
+					
+					@media (max-width: 1024px)
+						border-color: $color-medium
+						
+						&:before
+							opacity: 1
+							
+						&:after
+							opacity: 0
+					
+					.invite
+						opacity: 1
+					
+					.invited
+						opacity: 1
+		
+		label
+			display: block
+			width: 100%
+			height: 100%
+			pointer-events: all
+			border: 1px solid $color-orange
+			margin: 0
+			padding: 0
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			
+			&:hover
+				cursor: pointer
+			
+			span
+				position: absolute
+				left: 0
+				right: 0
+				top: 50%
+				transform: translate(0, -50%)
+				font-size: 12px
+				text-transform: uppercase
+				font-weight: $sans-bold 
+				opacity: 0
+				pointer-events: none
+				
+			.invited
+				color: $color-medium
+				
+		&--status
+			text-align: center
+			
+			&-invite
+				background: $color-orange
+				color: $color-white
+				
+				.invite
+					opacity: 1
+				
+			&-invited
+				background: $color-white 
+				color: $color-medium
+				
+				.invited
+					opacity: 1
+	
+	&-red
+		background: $color-red
+		height: 48px
+		line-height: 48px
+		
+		color: $color-white
+		text-transform: uppercase
+		position: relative
+		overflow: hidden
+
+		+caps
+
+		span
+			position: relative
+			z-index: 2
+
+		&:after
+			position: absolute
+			content: ' '
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background: #CA0023
+			transform: translate3d(-100%,0,0) 
+			// z-index: -1
+			transition: all ease-in-out 0.5s
+			pointer-events: none
+			
+		&:hover
+			&:after
+				transform: translate3d(0%,0,0) 
+		
+	&-primary
+		background: $color-orange
+		position: relative
+		overflow: hidden
+		height: 48px
+		line-height: 48px
+		
+		color: $color-white  
+		
+		text-transform: uppercase
+
+		+caps
+
+		span
+			position: relative
+			z-index: 2
+
+		&:after
+			position: absolute
+			content: ' '
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background: #EF8F00
+			transform: translate3d(-100%,0,0) 
+			// z-index: -1
+			transition: all ease-in-out 0.5s
+			pointer-events: none
+			
+		&:hover
+			&:after
+				transform: translate3d(0%,0,0) 
+
+	&-arrow
+		padding: 0
+		
+		span
+			color: $color-red
+			padding-right: 56px
+			position: relative
+			
+			+h3
+			
+			&:after 
+				position: absolute
+				content: ' '
+				right: 0
+				top: 50%
+				transform: translate(0, -50%)
+				
+				width: 40px
+				height: 24px
+				
+				background: url('../img/icons/arrow.svg') center center no-repeat
+				-webkit-background-size: contain 
+				-o-background-size: contain 
+				background-size: contain 
+				
+	&-gray
+		height: 48px
+		line-height: 46px
+		padding-left: 50px
+		padding-right: 50px
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		
+		border: 1px solid $color-light
+		
+		color: $color-medium
+		
+		+caps
+
+		position: relative
+		overflow: hidden
+		
+		span
+			position: relative
+			z-index: 2
+
+		&:after
+			position: absolute
+			content: ' '
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background: $color-bg-light
+			transform: translate3d(-100%,0,0) 
+			// z-index: -1
+			transition: all ease-in-out 0.5s
+			pointer-events: none
+			
+		&:hover
+			&:after
+				transform: translate3d(0%,0,0) 
+
+	&-sort
+		transition: all 0.4s
+		
+		span
+			color: $color-black
+			padding-right: 16px
+			position: relative
+			
+			+caps
+			
+			&:after
+				position: absolute
+				content: ' '
+				top: 50%
+				transform: translate(0, -50%)
+				right: 0
+				width: 8px
+				height: 4px
+				background: url('../img/icons/arrow-down.svg') center center no-repeat
+				-webkit-background-size: contain 
+				-o-background-size: contain 
+				background-size: contain
+				
+		&:hover
+			opacity: 0.7  
+				
+	&-white
+		height: 48px
+		line-height: 46px
+		border: 1px solid $color-white
+		color: $color-white
+		display: block
+		width: 100%
+		text-align: center
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		position: relative
+		overflow: hidden
+		
+		+caps
+
+		transition: all ease-in-out 0.5s
+
+		span
+			position: relative
+			z-index: 2
+
+		&:after
+			position: absolute
+			content: ' '
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background: $color-orange
+			transform: translate3d(-100%,0,0) 
+			// z-index: -1
+			transition: all ease-in-out 0.5s
+			pointer-events: none
+			
+		&:hover
+			border-color: $color-orange
+			
+			&:after
+				transform: translate3d(0%,0,0) 
+
+	&-calendar
+		span
+			color: $color-black
+			padding-right: 24px
+			position: relative
+			min-height: 16px
+			line-height: 16px
+			
+			+caps
+
+			&:after
+				position: absolute
+				content: ' '
+				right: 0
+				top: 0
+				width: 16px
+				height: 15px
+				background: url('../img/icons/calendar.svg') center center no-repeat
+				-webkit-background-size: contain 
+				-o-background-size: contain 
+				background-size: contain 
+				
+	&-download
+		padding-left: 0
+		padding-right: 0
+		
+		span
+			padding-left: 24px
+			position: relative
+			min-height: 16px
+			line-height: 16px
+			font-size: 17px
+			text-transform: none
+			color: $color-orange
+			text-decoration: underline
+
+			&:after
+				position: absolute
+				content: ' '
+				left: 0
+				top: 50%
+				transform: translate(0, -50%)
+				width: 16px
+				height: 15px
+				background: url('../img/icons/presentation.svg') center center no-repeat
+				-webkit-background-size: contain 
+				-o-background-size: contain 
+				background-size: contain 
+				
+	&-report
+		padding-right: 0
+		span
+			color: $color-black
+			padding-left: 22px
+			position: relative
+			min-height: 16px
+			line-height: 16px
+			
+			+caps
+
+			&:after
+				position: absolute
+				content: ' '
+				left: 0
+				top: 0
+				width: 14px
+				height: 16px
+				background: url('../img/icons/report.svg') center center no-repeat
+				-webkit-background-size: contain 
+				-o-background-size: contain 
+				background-size: contain 
+				
+	&-double
+		// min-width: 192px
+		position: relative
+		overflow: hidden
+		+caps
+
+
+		&__orange
+			height: 48px
+			line-height: 46px
+			border: 1px solid $color-orange
+			
+		&:after
+			position: absolute
+			content: ' '
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background: $color-orange
+			transform: translate3d(-100%,0,0) 
+			// z-index: -1
+			transition: all ease-in-out 0.5s
+			pointer-events: none
+			z-index: 3 
+			
+		&:hover
+			&:after
+				transform: translate3d(0%,0,0) 
+
+	&-sign
+		&__main
+			color: $color-orange
+			position: relative
+			z-index: 2 
+
+		&__hover
+			position: absolute
+			z-index: 4
+			top: 1px
+			bottom: 1px
+			line-height: 46px
+			left: 0
+			right: 0
+			text-align: center
+			
+			color: $color-white
+			
+	&-close
+		padding: 0 
+		width: 24px
+		height: 24px
+		background: url('../img/icons/close.svg') center center no-repeat
+		-webkit-background-size: contain 
+		-o-background-size: contain 
+		background-size: contain 
+		
+	&-link
+		color: $color-orange
+		background: transparent
+		transition: all 0.4s
+		
+		+small
+
+		&:hover
+			opacity: 0.8 
+			
+.modal
+	.btn
+		&-gray
+			border: 1px solid $color-light
+
+				
+			
+			
+			
+			

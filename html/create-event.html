@@ -1,0 +1,450 @@
+@@include('_include/header.html', {
+    "title": "Личный кабинет"
+})
+
+<div class="event-page__wrapper">
+	<div class="event">
+		<div class="breadcrumbs">
+			<div class="wrapper">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Создать событие</a></li>
+				</ul>
+			</div> <!-- .wrapper -->
+		</div> <!-- .breadcrumbs -->
+
+		<div class="wrapper">
+			<div class="create-event">
+				<div class="info">
+					<div class="info__headline wow fadeInUp">
+						<h5 class="h5">Создать событие</h5>
+					</div>
+
+					<div class="info__items">
+						<div class="create-event__item create-event__item--personal">
+							<div class="info__items-headline wow fadeInUp">
+								<span>Личные данные</span>
+							</div>
+
+							<div class="create-event__item-in">
+								<div class="create-event__item-l">
+									<div class="info__items-wrapper">
+										<div class="info__items-in">
+											<div class="info__item wow fadeInUp">
+												<div class="info__item-l">
+													<span>Фамилия</span>
+												</div>
+
+												<div class="info__item-r">
+													<div class="inp-group inp-group--input">
+														<input type="text" value="Ульянова" placeholder="Укажите фамилию">
+													</div>
+												</div>
+											</div>
+
+											<div class="info__item wow fadeInUp">
+												<div class="info__item-l">
+													<span>Имя</span>
+												</div>
+
+												<div class="info__item-r">
+													<div class="inp-group inp-group--input">
+														<input type="text" value="Татьяна" placeholder="Укажите имя">
+													</div>
+												</div>
+											</div>
+
+											<div class="info__item wow fadeInUp">
+												<div class="info__item-l">
+													<span>Отчество</span>
+												</div>
+
+												<div class="info__item-r">
+													<div class="inp-group inp-group--input">
+														<input type="text" value="Ивановна" placeholder="Укажите отчество">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="info__items-in">
+											<div class="info__item info__item--double">
+												<div class="info__item wow fadeInUp">
+													<div class="info__item-l">
+														<span>E-mail</span>
+													</div>
+
+													<div class="info__item-r">
+														<div class="inp-group inp-group--input">
+															<input type="email" value="ulianova@gmail.com" placeholder="Ваш e-mail">
+														</div>
+													</div>
+												</div>
+
+												<div class="info__item wow fadeInUp">
+													<div class="info__item-l">
+														<span>Телефон</span>
+													</div>
+
+													<div class="info__item-r">
+														<div class="inp-group inp-group--input">
+															<input type="text" value="+7 906 235-65-95" placeholder="Ваш телефон">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="create-event__item-r">
+									<p class="create-event__desc wow fadeInRight">
+										Дополнительный текст с правилами заполнения формы, с какими-то рекомендациями и ошибками ввода, если форма была заполнена не верно.
+									</p>
+								</div>
+							</div>
+						</div>
+						
+
+						<div class="create-event__item">
+							<div class="info__items-headline wow fadeInUp">
+								<span>Данные события</span>
+							</div>
+
+							<div class="create-event__item-in">
+								<div class="create-event__item-l">
+									<div class="info__items-wrapper">
+										<div class="info__items-in">
+											<div class="events__data">
+												<div class="events__data-l wow fadeInLeft">
+													<div class="inp-group inp-group--upload-big">
+														<label for="input-upload-big">
+															<button class="btn btn-primary"><span>Загрузить фото события</span></button>
+														</label>
+
+														<input type="file" id="input-upload-big">
+
+														<img src="img/team/horizontal.jpg" alt="">
+
+														<button class="btn btn-remove"></button>
+													</div>
+												</div>
+
+												<div class="events__data-r wow fadeInRight">
+													<div class="inp-group inp-group--textarea" data-counter="50">
+														<span class="inp-group__counter">
+															<i class="current">0</i>
+															<i class="separator">/</i>
+															<i class="total">50</i>
+														</span>
+														<textarea name="#" maxlength="50" placeholder="Название события"></textarea>
+													</div>
+
+													<div class="inp-group inp-group--input">
+														<input type="text" placeholder="Город">
+													</div>
+
+													<div class="inp-group inp-group--input inp-group--calendar">
+														<input type="text" placeholder="Дата">
+													</div>
+
+													<div class="inp-group inp-group--textarea" data-counter="50">
+														<span class="inp-group__counter">
+															<i class="current">0</i>
+															<i class="separator">/</i>
+															<i class="total">50</i>
+														</span>
+														<textarea name="#" maxlength="50" placeholder="Название цели"></textarea>
+													</div>
+
+													<div class="inp-group inp-group--input">
+														<input type="text" placeholder="Сумма сбора">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="create-event__item-r">
+									<p class="create-event__desc wow fadeInRight">
+										Придумайте краткое и понятное название события
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="create-event__item">
+							<div class="create-event__item-in">
+								<div class="create-event__item-l">
+									<div class="info__items-wrapper">
+										<div class="info__items-in">
+											<div class="events__data events__data--full wow fadeInUp">
+												<div class="inp-group inp-group--textarea" data-counter="200">
+													<span class="inp-group__counter">
+														<i class="current">0</i>
+														<i class="separator">/</i>
+														<i class="total">200</i>
+													</span>
+													<textarea name="#" maxlength="200" placeholder="Краткое описание события"></textarea>
+												</div>
+
+												<div class="inp-group inp-group--textarea inp-group--textarea-big">
+													<textarea name="#" placeholder="Описание"></textarea>
+												</div>
+
+												<div class="inp-group inp-group--upload-mini">
+													<label for="input-upload-mini">
+														<button class="btn btn-primary"><span>Загрузить фото</span></button>
+													</label>
+
+													<img src="img/team/horizontal.jpg" alt="">
+
+													<input type="file" id="input-upload-mini">
+
+													<button class="btn btn-remove"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="create-event__item-r">
+									<p class="create-event__desc wow fadeInRight">
+										Придумайте краткое и понятное название события
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="create-event__item">
+							<div class="create-event__item-in">
+								<div class="create-event__item-l wow fadeInUp">
+									<div class="info__items-wrapper">
+										<div class="info__items-in">
+											<div class="create-event__btn">
+												<button class="btn btn-gray"><span>Добавить описание + фото</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="create-event__item-r">
+								
+								</div>
+							</div>
+						</div>
+						
+						<div class="create-event__footer">
+							<div class="create-event__item ">
+								<div class="create-event__item-in">
+									<div class="create-event__item-l wow fadeInUp">
+										<div class="info__items-wrapper">
+											<div class="info__items-in">
+												<div class="inp-group inp-group--input">
+													<input type="text" placeholder="Хештег события">
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="create-event__item-r wow fadeInRight">
+										<p class="create-event__desc">
+											Придумайте уникальный хештег для события, по этому хештегу пользователи будут постить фото
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="create-event__item">
+								<div class="create-event__item-in">
+									<div class="create-event__item-l">
+										<div class="upload__items">
+											<label class="upload__item is-uploaded wow fadeInUp">
+												<div class="upload__item-img">
+													<img src="img/event/1.jpg" alt="">
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.1s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.2s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.3s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.4s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.5s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.6s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.7s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.8s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+
+											<label class="upload__item wow fadeInUp" data-wow-delay="0.9s">
+												<div class="upload__item-img">
+													
+												</div>
+
+												<div class="upload__item-btn">
+													<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M17.9707 32.527L17.9707 1.41428H15.9707L15.9707 15.9706L1.41436 15.9706L1.41436 17.9706L15.9707 17.9706L15.9707 32.527L17.9707 32.527ZM19.303 17.9706V15.9706L32.5271 15.9706L32.5271 17.9706H19.303Z" fill="#DD0B2F"/>
+													</svg>
+												</div>
+
+												<input type="file">
+											</label>
+										</div>
+
+										<div class="inp-group inp-group--agree wow fadeInUp">
+											<input type="checkbox" id="agree">
+											<label for="agree">
+												<span class="checkbox">
+													<svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 4L4.31579 7L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</span>
+												<span>Нажимая поддержать вы соглашаетесь на обработку персональных данных и согласны<br> с условиями <a href="#">оферты</a></span>
+											</label>
+										</div>
+									</div>
+
+									<div class="create-event__item-r">
+										<p class="create-event__desc wow fadeInRight">
+											Добавьте в галерею начальных 10 фотографий
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="create-event__item create-event__item--btn">
+								<div class="create-event__item-in">
+									<div class="create-event__item-l">
+										<button class="btn btn-red wow fadeInUp"><span>Создать событие</span></button>
+									</div>
+
+									<div class="create-event__item-r">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- .event-txt -->
+		</div> <!-- .wrapper -->
+	</div> <!-- .event -->
+</div> <!-- .event-page__wrapper -->
+
+<div class="sharing sharing-empty">
+	<div class="sharing-dec">
+		<img src="img/before-footer/waves.svg" alt="">
+	</div> <!-- .sharing-dec -->
+</div> <!-- .sharing -->
+
+@@include('./_include/footer.html')

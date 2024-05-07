@@ -1,0 +1,175 @@
+.partners
+	margin-top: 40px
+	
+	&__in
+		display: flex
+		margin-left: -20px
+		margin-right: -20px
+		
+	&__l
+		width: 77%
+		padding-left: 20px
+		padding-right: 20px
+		
+		.how-item__desc 
+			p
+				padding-left: 27px
+				padding-right: 27px
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				
+				+base
+
+
+		.total .headline-typical .h5
+			+h2
+
+		.total-sum__value
+			font-size: 100px
+			
+		.total-sum__currency
+			font-size: 37px
+			
+		.total
+			height: 208px
+			
+			&-in
+				-webkit-justify-content: center 
+				justify-content: center 
+			
+			&-r
+				width: auto
+				margin-left: 80px
+		
+	&__r
+		width: 23%
+		padding-left: 20px
+		padding-right: 20px
+		
+	&__top
+		display: flex
+		margin-bottom: 32px
+		
+		&-l
+			width: 613px
+			
+		&-r
+			width: calc(100% - 613px) 
+			
+			.top-footer
+				max-width: 315px
+				margin-left: auto
+				height: 335px
+				
+			.top-footer__txt-top .h5,
+			.top-footer__txt-bottom .h5
+				+h2
+
+			.top-footer__dec
+				svg
+					width: 118px
+					height: 190px
+					
+				transform: translate(0,-50%)
+				
+			.top-footer__txt-bottom
+				margin-top: -50px
+		
+	&__list
+		&-headline
+			margin: 0 0 24px 0
+			 
+			.h5
+				+h4
+				color: $color-black
+		ul
+			counter-reset: list
+			
+			li
+				position: relative
+				list-style-type: none
+				padding-left: 30px
+				
+				+base
+
+				color: $color-black
+				margin-bottom: 20px
+				
+				&:after
+					position: absolute
+					content: ' '
+					left: 0
+					top: 0
+					counter-increment: list
+					content: counter(list) ". "
+					color: $color-black
+					+base
+
+.sidebar-form
+	margin-bottom: 55px
+	
+	&__headline
+		margin: 0 0 32px 0
+		
+		.h5
+			+h3
+
+	&__btn
+		margin-top: 32px
+		margin-bottom: 24px
+		
+		.btn
+			display: block
+			width: 100%
+		
+	.inp-group
+		&--input
+			background: $color-white  
+			height: 56px
+			line-height: 56px
+			text-align: left
+			-webkit-border-radius: 0px 
+			border-radius: 0px 
+			margin-bottom: 1px
+			
+			input
+				text-align: left
+				padding-left: 24px
+				padding-right: 24px
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				border: none
+				
+				+placeholder-all
+					color: $color-medium
+					+base
+
+				&:hover,
+				&:focus,
+				&:hover:focus
+					outline: none
+					border: none
+				
+		&--textarea
+			textarea
+				display: block
+				width: 100%
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				border: none
+				-webkit-box-shadow: none 
+				box-shadow: none 
+				outline: none
+				resize: none
+				padding-top: 16px
+				padding-left: 24px
+				padding-right: 24px
+				min-height: 96px
+				
+				+placeholder-all
+					color: $color-medium
+					+base
+		

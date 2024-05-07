@@ -1,0 +1,233 @@
+.header
+	height: 112px
+	background: $color-white 
+	
+	padding: 28px 0
+	box-sizing: border-box 
+	
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	z-index: 10001 
+	
+	.btn-search
+		@media (min-width: 1025px) 
+			position: relative
+			z-index: 12 
+			top: 2px	
+	
+	&-r
+		@media (min-width: 1025px) 
+			position: relative
+			
+			.inp-group
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				left: -120px
+				
+				background: #fff
+				z-index: 10
+				height: 40px
+				line-height: 40 
+				-webkit-border-radius: 0 
+				border-radius: 0 
+				opacity: 0
+				pointer-events: none
+				transition: all 0.4s
+				
+				input
+					width: 100%
+					position: absolute
+					top: 50%
+					transform: translate(0, -50%)
+					right: 0
+					left: 0
+					height: 100%
+					line-height: 38px
+					-webkit-border-radius: 16px 
+					border-radius: 16px 
+					text-align: left
+					padding-left: 30px
+					border: 1px solid #D7DCE0
+					font-size: 14px
+					
+					+placeholder-all
+						font-size: 14px
+					
+				&--search
+					&.is-active
+						opacity: 1
+						pointer-events: all
+						
+		@media (max-width: 1350px)
+			.inp-group--search
+				left: -98px
+				
+		@media (max-width: 1024px)
+			.inp-group--search
+				display: none
+	
+	&-in
+		display: flex
+		-webkit-align-items: center 
+		align-items: center 
+		-webkit-justify-content: space-between 
+		justify-content: space-between 
+		
+	&-logo
+		display: block
+
+		svg
+			pointer-events: none
+			
+		&:hover
+			opacity: 0.8 
+		
+	&-nav
+			
+		ul
+			display: flex
+			position: relative
+			
+			li
+				display: inline-block
+				
+				a
+					padding: 0 12px
+					 
+					+caps
+
+					&:hover
+						opacity: 0.7 
+						
+					@media(max-width: 1350px)
+						padding: 0 8px 
+						
+						
+				&.lang
+					a
+						padding: 0
+						
+				&:last-child,
+				&:nth-last-child(2)
+					a
+						padding-right: 0
+						
+				&:first-child
+					a
+						padding-left: 0
+				
+	&-btns
+		font-size: 0
+		
+		.btn
+			text-transform: uppercase
+			color: $color-white
+			height: 40px
+			line-height: 40px
+			
+			+caps
+
+			&-profile
+				span
+					position: relative
+					padding-left: 32px
+					
+					&:before
+						position: absolute
+						content: ' '
+						left: 0
+						top: 50%
+						transform: translate(0, -50%)
+						
+						width: 16px
+						height: 15px
+						background: url('../img/icons/profile.svg') center center no-repeat
+						
+.lang
+	padding-left: 0
+	padding-right: 0
+	position: absolute
+	right: 0
+	width: 100px
+	transform: translate(100%, 0)
+	
+	@media(max-width: 1350px)
+		width: 60px
+	
+	a
+		display: block
+		width: 20px
+		height: 16px
+		
+		margin-left: auto
+		margin-right: auto
+	
+	&--ru
+		a
+			background: url('../img/lang/ru.svg') center center no-repeat
+			-webkit-background-size: 20px 16px 
+			-o-background-size: 20px 16px 
+			background-size: 20px 16px 
+			
+	&--en
+		a
+			background: url('../img/lang/en.svg') center center no-repeat
+			-webkit-background-size: 20px 16px 
+			-o-background-size: 20px 16px 
+			background-size: 20px 16px 
+			
+@media (min-width: 1025px)
+	.member-page--container
+		pointer-events: none
+		
+		.event-card
+			pointer-events: all
+			
+	.header-logo
+		// width: 166px
+		display: block
+		width: 166px
+		height: 71.5px
+		position: relative
+		
+		svg
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translate(0, -50%)
+			
+	.header
+		& > .wrapper
+			position: absolute
+			top: 50%
+			right: 0
+			left: 0
+			transform: translate(0, -50%)
+			
+.upload
+	&__items
+		&--wrapper
+			position: relative 
+		
+		&-desc
+			@media (min-width: 1025px)
+				position: absolute
+				top: 0
+				right: -40px
+				transform: translate(100%, 0)
+			
+			p
+				margin: auto
+				color: #9FAAB2
+				font-size: 15px
+				line-height: 133%
+				font-size: 15px!important 
+
+			

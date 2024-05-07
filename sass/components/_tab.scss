@@ -1,0 +1,106 @@
+.tab-content>.tab-pane {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.tab-content>.tab-pane.active {
+    height: auto;
+}
+
+.nav {
+	&-tabs {
+		background: $color-bg-light;
+		padding: 4px;
+		-webkit-border-radius: 16px;
+		        border-radius: 16px;
+		
+		display: flex;
+		height: 40px;
+		margin: 0 0 24px 0;
+		
+		li {
+			height: 100%;
+			
+			&.active {
+				a {
+					background: $color-red;
+					color: $color-white;
+				}
+			}
+			
+			a {
+				-webkit-border-radius: 12px;
+				        border-radius: 12px;
+				display: block;
+				height: 100%;
+				line-height: 40px;
+				text-align: center;
+				transition: none;
+				color: $color-dark;
+			}
+
+			&:first-child {
+				a {
+					padding: 0 39px;
+				}
+			}
+
+			&:nth-child(2) {
+				// width: calc(100% - 172px);
+				
+				a {
+					width: 100%;
+				}
+
+				&.active {
+					a {
+						background: $color-orange;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tab {
+	&--red {
+		.nav-tabs li.active a {
+			background: $color-red;
+		}
+
+		.support__form .support__sum .inp-group label:after {
+			border-color: $color-red;
+		}
+
+		.inp-group {
+			&.is-focused {
+	            input {
+	              border: 2px solid $color-red;
+	                -webkit-border-radius: 16px;
+	                        border-radius: 16px;
+            	}
+        	}
+		}
+	}
+
+	&--orange {
+		.nav-tabs li.active a {
+			background: $color-orange;
+		}
+
+		.support__form .support__sum .inp-group label:after {
+			border-color: $color-orange;
+		}
+
+		.inp-group {
+			&.is-focused {
+	            input {
+	              border: 2px solid $color-orange;
+	                -webkit-border-radius: 16px;
+	                        border-radius: 16px;
+            	}
+        	}
+		}
+	}
+}

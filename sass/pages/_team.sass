@@ -1,0 +1,122 @@
+.event
+	&-team
+		margin-bottom: 75px
+		
+		.event-txt
+			width: 50%
+			
+			p
+				border-bottom: none
+				max-width: 100%
+				
+				+base
+
+				b
+					+h4
+
+		.event
+			&-card
+				min-width: 448px
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				transform: translate(0, 80px)
+				
+			&-content
+				.btn
+					& + .btn
+						margin-top: 24px
+						
+			&-img
+				// width: calc((100vw - 1350px) + 448px)
+				
+				&__wrapper
+					min-height: calc(100vh - 112px)
+					height: auto
+					 
+				
+				&__in
+				    width: calc((100vw - 1350px) + 448px)
+				    min-width: 480px
+				    display: block
+				    height: 100%
+				    object-fit: cover
+				    object-position: top
+				    background: #EAEAEA 
+				    top: 0
+				    right: 0
+				    position: absolute
+				
+				img
+					position: absolute
+					width: auto
+					top: 180px
+					margin-left: auto
+					margin-right: auto
+					left: 0
+					right: 0
+					height: 25vh
+					object-fit: contain
+					
+.sharing
+	&-empty
+		padding: 0
+		
+	&-single
+		padding-top: 80px
+		padding-bottom: 80px
+		
+.sharing-gallery__last
+	padding-bottom: 0
+					
+.team
+	&-headline
+		margin: 0 0 40px 0
+		display: flex
+		-webkit-align-items: flex-end 
+		 align-items: flex-end 
+		 
+		.h5
+			line-height: 1
+			
+			+h1
+
+			color: $color-black
+			text-transform: uppercase
+			margin-right: 32px
+			
+		span
+			position: relative
+			bottom: 5px
+			
+			+caps
+
+			color: $color-orange
+	.hero
+		&-items
+			display: flex
+			-webkit-flex-wrap: wrap 
+			-ms-flex-wrap: wrap 
+			flex-wrap: wrap 
+			margin-left: -32px
+			margin-right: -32px
+			
+		&-item
+			&__wrapper
+				margin-bottom: 40px
+				width: 25%
+				padding-left: 32px
+				padding-right: 32px
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				
+.team
+	&__invite
+		.user__img
+			border: 2px solid #fff
+			-webkit-border-radius: 50% 
+			border-radius: 50% 
+			
+			&.is-active
+				border-color: $color-orange

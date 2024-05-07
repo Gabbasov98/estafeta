@@ -1,0 +1,329 @@
+.event
+	position: relative
+	
+	.breadcrumbs
+		margin-bottom: 24px  
+	
+	&-img
+		img
+			position: absolute
+			right: 0
+			top: 0
+			width: 57%
+			display: block
+			height: 100%
+			object-fit: cover
+			object-position: top
+			
+		&__wrapper
+			position: absolute
+			top: -24px
+			bottom: 0
+			right: 0
+			width: 100%
+			// min-height: 100%
+			height: calc(100vh - 112px)
+			
+			.wrapper
+				position: relative
+				height: 100%
+			
+	&-txt
+		width: 50vw
+		min-height: calc(100vh - 112px)
+		height: auto
+		position: relative
+		z-index: 10 
+		
+	&-details
+		margin: 0 0 24px 0
+		 
+		span
+			color: $color-orange
+			
+			+h2
+
+	&-separator
+		margin: 0 15px 
+		
+	&-more
+		margin: 0 0 24px 0
+		 
+		.h5
+			line-height: 95%
+			margin: 0 0 40px 0 
+			+h0
+
+		p
+			max-width: 528px
+			color: $color-black
+			padding-bottom: 24px
+			border-bottom: 1px solid $color-light
+			+base
+
+	&-author
+		display: flex
+		-webkit-align-items: center 
+		align-items: center 
+				
+		&__l
+			margin-right: 24px
+			
+		&__r
+			width: calc(100% - 104px) 
+			
+		&__img
+			width: 80px
+			height: 80px
+			-webkit-border-radius: 50% 
+			border-radius: 50% 
+			overflow: hidden
+			
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: top
+				
+		&__desc
+			span
+				display: block
+				margin: 0 0 4px 0 
+				color: $color-dark
+				+caps
+
+			p
+				color: $color-black
+				+h4
+
+	&-desc
+		margin: 40px 0 20px 0
+		
+		&__in
+			max-width: 840px
+		
+		&__headline
+			color: $color-black
+			margin: 0 0 20px 0 
+			
+			+h4
+
+		p
+			margin: 0 0 20px 0 
+			+base
+
+		&__img
+			margin: 32px 0
+			display: block
+			max-width: 460px
+			margin-left: auto
+			margin-right: auto
+
+		img
+			width: 100%
+			display: block
+			
+	// .wrapper
+	// 	&-card
+	// 		position: sticky
+	// 		top: 0
+			// top: 300px
+			// left: 0!important
+			// right: 0
+			// -webkit-box-sizing: border-box
+			// -moz-box-sizing: border-box
+			// box-sizing: border-box
+			
+	// &-page__wrapper
+	
+	&-card
+		width: auto!important
+		
+		position: absolute
+		bottom: 0
+		right: 15px 
+		display: inline-block
+		padding: 40px
+		background: $color-white
+		transform: translate(0, 272px)
+		
+		&__name
+			.h5
+				color: $color-black
+				margin: 0 0 24px 0
+				 
+				+h2
+	&-members
+		&__items
+			font-size: 0
+			padding-left: 10px
+		
+		&__item
+			display: inline-block
+			background: $color-orange
+			width: 44px
+			height: 44px
+			-webkit-border-radius: 50% 
+			 border-radius: 50% 
+			border: 2px solid $color-white
+			-webkit-box-sizing: border-box
+			 -moz-box-sizing: border-box
+			 box-sizing: border-box
+			-webkit-border-radius: 50% 
+			 border-radius: 50%  
+			overflow: hidden
+			margin-left: -10px
+			
+			&:hover
+				cursor: pointer
+			
+			span
+				+caps
+				display: flex
+				-webkit-justify-content: center 
+				justify-content: center 
+				height: 100%
+				width: 100%
+				line-height: 40px
+				color: $color-white
+				
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: top
+				
+		&__footer
+			margin: 24px 0 0 0
+			
+			display: flex
+			-webkit-justify-content: space-between 
+			 justify-content: space-between 
+			-webkit-align-items: center 
+			 align-items: center 
+			
+			span
+				+caps
+
+				&:first-child 
+					color: $color-black
+					
+				&:last-child 
+					color: $color-orange
+				
+	&-status
+		margin: 0 0 32px 0
+		 
+		&__progress
+			height: 6px
+			background: $color-light
+			position: relative
+			margin: 0 0 12px 0 
+			
+			&:after
+				position: absolute
+				content: ' '
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				width: 33%
+				background: $color-red 
+				
+		&__footer
+			display: flex
+			-webkit-justify-content: space-between 
+			justify-content: space-between 
+			-webkit-align-items: center 
+			align-items: center 
+			
+		&__value
+			+h3
+
+		&__currency
+			font-size: 17px
+			font-weight: $sans-medium
+			position: relative
+			top: -3px 
+
+		&__current
+			span
+				color: $color-red
+						
+						
+		&__total
+			span
+				color: $color-light
+				
+	&-content
+		.btn
+			display: block
+			text-align: center
+			
+	&-members
+		margin-top: 40px
+		
+		&__headline
+			margin: 0 0 24px 0
+			 
+			.h5
+				color: $color-black
+				
+				+h3
+
+.sharing
+	&-gallery
+		padding: 40px 0
+		position: relative
+		
+		&__tag
+			
+			display: inline-block
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			left: 0
+			right: 0
+			text-align: center
+			
+			span
+				display: inline-block
+				background: $gradient-orange
+				-webkit-border-radius: 80px 
+				border-radius: 80px 
+			
+				padding: 40px
+				
+				+h1
+				color: $color-white
+				text-align: center
+
+		&__items
+			display: flex
+			-webkit-flex-wrap: wrap 
+			-ms-flex-wrap: wrap 
+			flex-wrap: wrap 
+			
+		&__item
+			width: 20%
+			height: 240px
+			opacity: 0.5
+			transition: all 0.4s
+			padding: 2px
+			-webkit-box-sizing: border-box
+			 -moz-box-sizing: border-box
+			 box-sizing: border-box 
+			
+			&:hover
+				opacity: 1
+			
+			img
+				display: block
+				width: 100%
+				height: 100%
+				
+				object-fit: cover
+				object-position: center 
+			

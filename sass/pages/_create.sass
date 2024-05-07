@@ -1,0 +1,358 @@
+.create
+	&-event
+		margin-bottom: 100px
+		
+		.info__items-wrapper
+			margin-bottom: 16px
+			
+		&__btn
+			display: flex
+			-webkit-justify-content: center 
+			justify-content: center 
+			width: 100%
+			margin-top: 24px
+			
+			.btn
+				border: 1px solid $color-dark
+				background: $color-bg-light
+				
+				padding-left: 30px
+				padding-right: 30px 
+			
+		&__item
+			&--member
+				margin-bottom: 40px
+				
+				.team
+					&__invite
+						&-btn
+							display: flex
+							-webkit-justify-content: center 
+							justify-content: center 
+							
+							.btn
+								min-width: 269px
+								-webkit-box-sizing: border-box
+								-moz-box-sizing: border-box
+								box-sizing: border-box
+								
+						&-content
+							.users
+								padding: 0
+								background: transparent
+								margin-bottom: 24px
+								
+								@media (max-width: 1024px)
+									margin-top: 0!important
+								
+								.user__r
+									border-bottom: none
+									padding-top: 0
+									padding-bottom: 0
+									display: flex
+									-webkit-align-items: center 
+									align-items: center 
+									-webkit-justify-content: space-between 
+									justify-content: space-between 
+									
+									.btn
+										border: 1px solid $color-light
+										height: 32px
+										line-height: 30px
+										-webkit-box-sizing: border-box
+										-moz-box-sizing: border-box
+										box-sizing: border-box
+										padding-left: 30px
+										padding-right: 30px
+										padding-top: 0
+										padding-bottom: 0
+										
+									&-top
+										width: 100%
+										margin-bottom: 0
+										
+								.user
+									@media (max-width: 1024px)
+										position: relative
+										
+									&__name
+										margin-bottom: 0
+										
+										@media (max-width: 1024px)
+											padding-right: 30px
+											-webkit-box-sizing: border-box
+											-moz-box-sizing: border-box
+											box-sizing: border-box
+										
+									&__status
+										
+										@media (max-width: 1024px)
+											height: 16px
+											position: absolute
+											right: 0
+											top: 50%
+											transform: translate(0, -50%)
+											width: 30px
+											display: flex
+											-webkit-justify-content: flex-end 
+											justify-content: flex-end 
+											
+											.btn
+												text-align: right
+												border: none
+												width: 16px
+												height: 16px
+												background: url('../img/icons/close-profile.svg') center right no-repeat
+												-webkit-background-size: contain 
+												-o-background-size: contain 
+												background-size: contain 
+												border: none
+												text-indent: -9999px 
+												padding: 0
+												
+												span
+													display: none
+								
+			.inp-group--calendar
+				&:after
+					right: 16px
+					
+				input
+					padding-right: 16px!important
+					
+			.inp-group--agree label span 
+				+base
+				color: $color-black
+				
+			.inp-group--agree label .checkbox
+				width: 24px
+				height: 24px
+				
+				svg
+					width: 12px
+					height: auto
+				
+			.inp-group--agree label
+				padding-left: 48px
+				
+			&--btn
+				margin-top: 40px
+				display: flex
+				-webkit-justify-content: center 
+				justify-content: center 
+				
+				.btn
+					padding-left: 65px
+					padding-right: 65px
+				
+			.inp-group
+				margin-bottom: 16px
+				border: none
+				
+				&:last-child
+					margin-bottom: 0
+				
+				input
+					-webkit-border-radius: 0px 
+					border-radius: 0px 
+					border: none
+					text-align: left
+					padding-left: 24px
+					padding-right: 24px
+					background: $color-white 
+					
+					&:hover,
+					&:focus,
+					&:hover:focus
+						outline: none
+						border: none
+						
+			&-in
+				margin-left: -20px
+				margin-right: -20px
+				display: flex
+			
+			&-l
+				padding-left: 20px
+				padding-right: 20px
+				width: calc(100% - 408px) 
+				
+			&-r
+				width: 408px
+				padding-left: 20px
+				padding-right: 20px
+				
+
+		&__desc
+			+small
+			color: $color-medium
+			line-height: 133%
+			
+
+		.info
+			&__item
+				&--double
+					display: flex
+					background: transparent 
+					
+					.info
+						&__item
+							width: calc(50% - 8px)
+							-webkit-box-sizing: border-box
+							-moz-box-sizing: border-box
+							box-sizing: border-box
+							
+							&-l
+								width: 30%
+							
+							&-r
+								width: 70%
+								
+		&__footer
+			margin-top: 24px
+			
+			.inp-group
+				&.inp-group--input
+					width: 100%
+					
+[data-counter="200"]
+	textarea
+		padding-right: 75px
+								
+.events
+	&__data
+		display: flex
+		margin-left: -8px
+		margin-right: -8px
+		
+		width: calc(100% + 16px) 
+		
+		&--full
+			-webkit-flex-wrap: wrap 
+			-ms-flex-wrap: wrap 
+			flex-wrap: wrap 
+		
+			.inp-group
+				width: 100%
+				padding-left: 8px
+				padding-right: 8px
+				
+				&__counter
+					right: 16px
+					
+				&--upload-mini
+					width: calc(100% - 16px) 
+					-webkit-box-sizing: border-box
+					-moz-box-sizing: border-box
+					box-sizing: border-box
+					margin-left: auto
+					margin-right: auto
+		
+		&-l
+			width: 50%
+			height: 100%
+			
+			padding-left: 8px
+			padding-right: 8px
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			
+			.inp-group
+				background: url('../img/icons/bg-upload-big.png') center center no-repeat
+				-webkit-background-size: 100% 100% 
+				-o-background-size: 100% 100% 
+				background-size: 100% 100% 
+			
+		&-r
+			width: 50%
+			padding-left: 8px
+			padding-right: 8px
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			
+.create-event__item
+	&--personal
+		.info__items-wrapper
+			margin-bottom: 40px
+			
+.upload
+	&__items
+		display: flex
+		margin-left: -6.5px
+		margin-right: -6.5px
+		margin-bottom: 40px
+		
+	&__item
+		width: 10%
+		padding-left: 6.5px
+		padding-right: 6.5px
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		padding-bottom: calc(10% - 13px)
+		position: relative
+		display: flex
+		display: block
+		
+		input
+			position: absolute
+			opacity: 0
+			width: 0
+			visibility: hidden
+		
+		&-img
+			position: absolute
+			top: 0
+			right: 6.5px
+			bottom: 0
+			left: 6.5px
+			z-index: 2 
+			
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				
+		svg
+			transform-origin: center center
+				
+		&.is-uploaded
+
+			svg
+
+				transform: rotate(45deg)
+				
+				path
+					fill: #fff
+		
+		&:hover
+			cursor: pointer
+		
+		&:after
+			position: absolute
+			content: ' '
+			top: 0
+			right: 6.5px
+			bottom: 0
+			left: 6.5px
+			background: url('../img/icons/bg-upload-micro.png') center center no-repeat
+			-webkit-background-size: cover 
+			-o-background-size: cover 
+			background-size: cover 
+			z-index: 1 
+		
+		&-btn
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			left: 0
+			right: 0
+			text-align: center
+			z-index: 2 
+			
+.create-event__item .info__item-r .inp-group input
+	padding-right: 0
+	

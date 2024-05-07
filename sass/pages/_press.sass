@@ -1,0 +1,485 @@
+.press
+	&__item
+		display: flex
+		-webkit-align-items: center 
+		align-items: center 
+		
+		&--video
+			.press__img
+				position: relative
+				
+				&:after
+					position: absolute
+					content: ' '
+					left: 0
+					right: 0
+					top: 50%
+					transform: translate(0, -50%)
+					width: 34px
+					height: 48px
+					background: url('../img/icons/play.svg') center center no-repeat
+					-webkit-background-size: contain 
+					-o-background-size: contain 
+					background-size: contain 
+					margin-left: auto
+					margin-right: auto
+		
+		@media (max-width: 1024px)
+			margin-bottom: 24px
+		
+		&:hover
+			.press
+				&__item
+					&-in
+						background: $color-white 
+						
+						@media (max-width: 1024px)
+							background: transparent 
+						
+				&__headline
+					color: $color-red
+					
+				&__img
+					opacity: 1
+					
+			.sharing-items
+				opacity: 1!important
+				pointer-events: all
+						
+		&-l
+			width: 225px
+			position: relative
+			z-index: 10 
+			
+			@media (max-width: 1024px)
+				width: 100%
+			
+		&-r
+			width: calc(100% - 225px) 
+			
+			@media (max-width: 1024px)
+				width: 100%
+
+		&-in
+			display: flex
+			
+			padding: 28px 72px 28px 40px
+			transition: all 0.4s
+			margin-left: -40px
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			width: 94%
+			
+			@media (max-width: 1024px)
+				-webkit-flex-direction: column 
+				-ms-flex-direction: column 
+				flex-direction: column 
+				width: 100%
+				padding: 0
+				margin-left: 0
+				position: relative
+				padding-top: 90px
+			
+		&-socials
+			width: 6%
+			// padding-left: 40px
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			-webkit-justify-content: center 
+			justify-content: center 
+			
+			@media (max-width: 1024px)
+				display: none
+			
+			.sharing-items
+				margin-right: -40px
+				-webkit-flex-direction: column 
+				-ms-flex-direction: column 
+				flex-direction: column 
+				-webkit-justify-content: center 
+				justify-content: center 
+				-webkit-align-items: center 
+				align-items: center 
+				opacity: 0
+				pointer-events: none
+				transition: all 0.4s
+			
+				.sharing
+					&-item
+						margin-bottom: 16px
+						width: 32px
+						height: 32px
+						margin-left: 0
+						margin-right: 0
+						
+						&:last-child
+							margin-bottom: 0
+							
+	&__content
+		display: flex
+		-webkit-align-items: center 
+		align-items: center 
+		
+		&-l
+			@media (max-width: 1024px)
+				position: absolute
+				top: 0
+				right: -24px
+		
+		&-r
+			padding: 40px 32px
+			display: flex
+			-webkit-align-self: flex-start 
+			align-self: flex-start 
+			
+			p
+				& + p
+					margin-top: 20px
+					
+			@media (max-width: 1024px)
+				padding: 0
+			
+	&__desc
+		p
+			+base
+							
+	&__headline
+		margin: 0 0 8px 0
+		width: 375px
+		transition: all 0.4s
+		 
+		+h2
+
+		color: $color-black
+		
+		@media (max-width: 1024px)
+			width: 100%
+			font-size: 32px !important
+			margin: 0 0 24px 0 
+		
+		&-wrapper
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translate(0, -50%)
+			
+			@media (max-width: 1024px)
+				position: static
+				transform: none
+				
+		&-footer
+			@media (max-width: 1024px)
+				display: flex
+				margin-bottom: 24px
+				
+			span
+				@media (max-width: 1024px)
+					font-size: 12px
+					margin-right: 24px
+		
+	&__date
+		display: block
+		margin: 0 0 8px 0
+		
+		+small
+
+		color: $color-medium
+		
+		@media (max-width: 1024px)
+			margin-bottom: 0
+	
+	&__category
+		display: block
+		+small
+
+		color: $color-medium
+		
+	&__img
+		width: 300px
+		height: 200px
+		opacity: 0.5
+		transition: all 0.4s
+		
+		@media (max-width: 1024px)
+			width: 245px
+			height: 165px
+		
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+			
+	&-page
+		margin-bottom: 120px
+		
+		@media (max-width: 1024px)
+			margin-bottom: 40px
+		
+		.events-headline
+			display: flex
+			-webkit-align-items: center 
+			align-items: center 
+			
+			.btn
+				&-calendar
+					padding-right: 0
+					transition: all 0.4s
+					
+					&:hover
+						opacity: 0.7 
+					
+		@media (max-width: 1024px)
+			.events-headline
+				padding-left: 0
+				padding-right: 0
+				
+				&__l
+					width: 100%
+					
+					.tabs
+						width: 100%
+					
+					.tab
+						text-align: center
+						padding-left: 0
+						padding-right: 0
+						
+						&:nth-child(2),
+						&:nth-child(3)
+							width: 37%
+							
+						&:first-child
+							width: 26%
+							
+	&-single
+		width: 50%
+		
+		@media (max-width: 1024px)
+			width: 100%
+		
+		&__wrapper
+			&.event-img__wrapper
+				height: 646px
+		
+		&__footer
+			display: flex
+			-webkit-justify-content: space-between 
+			justify-content: space-between 
+			padding-right: 50px
+			margin-top: 40px
+			
+			@media (max-width: 1024px)
+				-webkit-flex-direction: column-reverse
+				-ms-flex-direction: column-reverse
+				flex-direction: column-reverse
+				padding-right: 0
+			
+			.btn-gray
+				border: 1px solid $color-medium
+				
+			.btn
+				width: auto
+				padding-left: 10px
+				padding-right: 10px
+				min-width: 224px
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				text-align: center
+				
+				@media (max-width: 1024px)
+					min-width: initial
+					width: 100% 
+					margin-top: 24px
+					height: 40px
+					line-height: 40px
+					
+				&:last-child
+					@media (max-width: 1024px)
+						margin-top: 0
+				
+		&__img
+			width: 100%
+			height: 100%
+			pointer-events: all
+			height: 590px
+			
+			@media (max-width: 1024px)
+				height: 360px
+			
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: top
+		    	
+			    
+			    
+		&__imgs
+			position: absolute
+			right: 0
+			top: 0
+			width: 45%
+			display: block
+			height: 590px
+			pointer-events: all
+			
+			@media (max-width: 1024px)
+				position: static
+				width: calc(100% + 48px)
+				height: 360px
+				margin-left: -24px
+				margin-right: -24px
+				margin-bottom: 34px
+				
+			.slick-dots
+				@media (max-width: 1024px)
+					margin-top: 10px
+			
+			&-controls
+				position: absolute
+				right: 15px
+				bottom: 0
+				
+				display: flex
+				width: 160px
+				padding-left: 0
+				padding-right: 0
+				-webkit-box-sizing: border-box
+				-moz-box-sizing: border-box
+				box-sizing: border-box
+				
+				@media (max-width: 1024px)
+					display: none
+				
+				div
+					color: $color-dark
+					+base
+
+				.top
+					&-slider
+						&__separator
+							margin: 0 3px
+							 
+						&__arrows
+							margin-left: 0
+							position: absolute
+							left: 0
+							right: 0
+							display: flex
+							-webkit-justify-content: space-between 
+							justify-content: space-between 
+							
+						&__arrow
+							background: transparent
+							border: none
+							-webkit-box-shadow: none 
+							 	box-shadow: none 
+							outline: none 	
+							padding: 0
+							margin: 0
+							
+							svg
+								opacity: 1
+								transition: all 0.4s
+								
+								path
+									transition: all 0.4s
+								
+							&:hover
+								svg
+									path
+										fill: #1F1F1F
+
+						&__numbers
+							width: 100%
+							display: flex
+							-webkit-justify-content: center 
+							justify-content: center 
+		    
+		
+		&__date
+			+h3
+			margin: 0 0 16px 0
+			color: $color-orange
+			line-height: 1
+			
+		&__content
+			.h5
+				+h1
+				color: $color-black
+				margin: 0 0 24px 0
+				
+			p
+				+base
+				color: $color-black
+				margin-bottom: 15px
+				
+				@media (max-width: 1024px)
+					margin-bottom: 10px
+							
+.more-btn
+	margin-top: 24px
+	display: flex
+	-webkit-justify-content: center 
+	justify-content: center 
+	
+	.btn
+		min-width: 272px
+		text-align: center
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		
+		@media (max-width: 1024px)
+			display: block
+			height: 40px
+			line-height: 40px
+			font-size: 12px
+			width: 100%
+			min-width: initial 
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+			text-align: center
+			
+.video
+	height: 375px
+	width: calc(100% - 50px)
+	margin: 32px 0
+	position: relative
+	
+	@media (max-width: 1024px)
+		width: 100%
+		height: 170px
+		margin: 24px 0 
+	
+	img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: cover
+	
+	&__btn
+		width: 34px
+		height: 48px
+		background: url('../img/icons/play.svg') center center no-repeat
+		-webkit-background-size: contain 
+		-o-background-size: contain 
+		background-size: contain 
+		transition: all 0.4s 
+		position: absolute
+		top: 50%
+		transform: translate(0, -50%)
+		left: 0
+		right: 0
+		margin-left: auto
+		margin-right: auto
+		
+		&:hover
+			cursor: pointer
+			opacity: 0.8 
