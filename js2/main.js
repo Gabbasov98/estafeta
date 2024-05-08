@@ -42,11 +42,25 @@ $('.certificate-help__slider').slick({
 
  let nav = document.querySelector('.tabs')
 
-        if (nav) {
-            let navLinks = document.querySelectorAll('.tabs .tab')
-            let activeLink = document.querySelector('.tabs .is-active')
-            activeLink.scrollIntoView({
-                behavior: "smooth",
-                inline: "center"
-            })
+        window.onresize = function(event) {
+            setActiveTabVisible()
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setActiveTabVisible()
+        })
+
+        function setActiveTabVisible() {
+            if (window.innerWidth > 992) {
+                return
+            }
+            if (nav) {
+                let navLinks = document.querySelectorAll('.tabs .tab')
+                let activeLink = document.querySelector('.tabs .is-active')
+                activeLink.scrollIntoView({
+                    behavior: "smooth",
+                    inline: "center",
+                    block: 'nearest',
+                })
+            }
         }
