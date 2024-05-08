@@ -39,3 +39,14 @@ $('.certificate-help__slider').slick({
         },
     ]
 });
+
+ let nav = document.querySelector('.tabs')
+
+        if (nav) {
+            let navLinks = document.querySelectorAll('.tabs .tab')
+            let activeLink = document.querySelector('.tabs .is-active')
+            activeLink.scrollIntoView({
+                behavior: "smooth",
+                inline: "center"
+            })
+        }
