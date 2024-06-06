@@ -1092,6 +1092,7 @@
 
 .reports-help {
   padding: 160px 0;
+  overflow: hidden;
 }
 .reports-help__top {
   position: relative;

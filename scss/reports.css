@@ -372,7 +372,8 @@
       opacity: 0; }
 
 .reports-help {
-  padding: 160px 0; }
+  padding: 160px 0;
+  overflow: hidden; }
   .reports-help__top {
     position: relative; }
     .reports-help__top:after {
