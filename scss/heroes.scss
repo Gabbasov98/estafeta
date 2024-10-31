@@ -1,0 +1,256 @@
+@import "mixins";
+.heroes-main{
+  &__grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  &__col{
+    padding-bottom: 104px;
+  }
+  &__col2{
+    padding-top: 24px;
+  }
+  &__desc{
+    font-size: 20px;
+    line-height: 140%;
+    margin-top: 24px;
+  }
+  &__img{
+    width: 100%;
+    display: block;
+    max-width: 567px;
+  }
+}
+
+.heroes{
+  padding-bottom: 104px;
+  margin-top: -58px;
+  position: relative;
+  z-index: 2;
+  &__items{
+    @include grid100gap(64px);
+  }
+}
+
+.hero-card{
+  display: grid;
+  grid-template-columns: 41.5% calc(58.5% - 8px);
+  gap: 8px;
+  &__col,
+  &__col2{
+    background: #FFF;
+  }
+  &__col2{
+    padding: 24px 32px 0;
+    @media screen and (min-width: 577px){
+      display: block !important;
+    }
+  }
+  &__top{
+    position: relative;
+  }
+  &__img{
+    @include imgCover(56.25%);
+  }
+  &__cup{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px 16px 0px 0px;
+    background: #FFF;
+    @include center;
+    width: 68px;
+    height: 68px;
+    img{
+      width: 36px;
+    }
+  }
+  &__bottom{
+    padding: 24px;
+  }
+  &__title{
+    background: linear-gradient(254deg, #F26D7D 1.6%, #F59C00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+    line-height: 125%;
+    font-weight: 600;
+    font-family: Akrobat , sans-serif;
+    text-transform: uppercase;
+  }
+  &__name{
+    margin-top: 8px;
+    font-size: 32px;
+    line-height: 112.5%;
+    font-weight: 700;
+    font-family: Akrobat , sans-serif;
+    text-transform: uppercase;
+  }
+  &__mob{
+    display: none;
+  }
+  .tab{
+    padding: 0 24px;
+  }
+  .tab-content{
+    margin-top: 24px;
+    padding-bottom: 24px;
+    max-height: 345px;
+    overflow-y: auto;
+  }
+  &__about{
+    font-size: 16px;
+    line-height: 150%;
+    color: #5C5C5C;
+    max-width: 600px;
+    p{
+      line-height: inherit;
+    }
+  }
+  &__awards{
+    @include grid100gap(16px)
+  }
+  &__award{
+    &-name{
+      font-size: 16px;
+      line-height: 125%;
+      font-weight: 500;
+      margin-right: 6px;
+      display: inline-block;
+    }
+    &-desc{
+      font-size: 12px;
+      line-height: 133%;
+      color: #5C5C5C;
+      display: inline-block;
+    }
+  }
+}
+
+.tab-content{
+  display: none;
+  &.is-active{
+    display: block;
+  }
+  .tab-content{
+    margin-top: 24px;
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+  .heroes-main{
+    padding: 40px 0 32px;
+    &__grid{
+      grid-template-columns: 100%;
+    }
+    &__col{
+      padding-bottom: 0;
+    }
+    &__col2{
+      display: none;
+    }
+    &__desc{
+      font-size: 16px;
+      line-height: 150%;
+      margin-top: 16px;
+    }
+  }
+
+  .heroes{
+    padding: 32px 0 132px;
+    margin-top: 0;
+    &__items{
+      gap: 40px;
+    }
+  }
+
+  .hero-card{
+    &__col2{
+      padding: 16px;
+    }
+    &__cup{
+      width: 48px;
+      height: 48px;
+      img{
+        width: 24px;
+      }
+    }
+    &__bottom{
+      padding: 16px;
+    }
+    &__title{
+      font-size: 20px;
+    }
+    &__name{
+      font-size: 24px;
+      margin-top: 4px;
+    }
+    &__about{
+      font-size: 14px;
+      line-height: 143%;
+    }
+    &__award{
+      &-name{
+        font-size: 14px;
+        line-height: 128%;
+        margin: 0 0 6px;
+        display: block;
+      }
+      &-desc{
+        display: block;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .hero-card{
+    grid-template-columns: 100%;
+    gap: 0;
+    &._open{
+      .hero-card__btn{
+        ._view1{
+          display: none;
+        }
+        ._view2{
+          display: block;
+        }
+      }
+    }
+    &__col2{
+      padding: 0 16px 8px;
+      display: none;
+    }
+    &__mob{
+      display: block;
+      padding: 24px 16px 16px;
+      background-color: #fff;
+    }
+    &__btn{
+      width: 100%;
+      height: 40px;
+      font-size: 14px;
+      @include center;
+      font-weight: 700;
+      ._view2{
+        display: none;
+      }
+    }
+    .tabs{
+      display: flex;
+    }
+    .tab{
+      font-size: 14px !important;
+      flex-grow: 1;
+      justify-content: center;
+      text-align: center;
+    }
+    .tab-content{
+      max-height: unset;
+      padding: 0;
+    }
+  }
+}
