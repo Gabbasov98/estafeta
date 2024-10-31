@@ -247,10 +247,20 @@
       flex-grow: 1;
       justify-content: center;
       text-align: center;
+      padding: 0;
     }
     .tab-content{
       max-height: unset;
       padding: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 340px){
+  .hero-card{
+    .tab{
+      font-size: 12px !important;
     }
   }
 }
